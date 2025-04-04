@@ -1,0 +1,17 @@
+package com.github.ashvard.gdx.happycrab.screen.level.level.physics;
+
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
+
+import com.github.ashvard.screen.level.level.physics.ShapePosUpdater;
+
+/**
+ * Created by user on 13.01.2019.
+ */
+public class RectanglePosUpdater implements ShapePosUpdater<Rectangle> {
+    @Override
+    public void update(Rectangle rectangle, Vector2 vector2) {
+        rectangle.setX(vector2.x); //todo offset
+        rectangle.setY(vector2.y); //todo offset
+    }
+}
