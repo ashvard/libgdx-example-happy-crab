@@ -9,4 +9,5 @@ public interface Tags {
     String PEARL_ID = "pearl_id";
     String HERO_ID = "hero";
 
+    String PEARL = "pearl";
 }

@@ -15,10 +15,7 @@ import com.github.ashvard.gdx.happycrab.screen.level.Tags;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.script.HeroScript;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.AnimationSystem;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.CameraSystem;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.AnimationComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.HeroComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.InputComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.PearlComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.*;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimation;
 import com.github.ashvard.gdx.simple.structure.screen.AbstractGameScreen;
 import com.github.ashvard.gdx.simple.input.InputSystem;
@@ -97,7 +94,8 @@ public class Level1Screen extends AbstractGameScreen {
         Gdx.input.setInputProcessor(inputSystem.getInputProcessor());
 
         // collectables
-        sceneLoader.addComponentByTagName(Tags.SEA_SHELL, PearlComponent.class);
+        sceneLoader.addComponentByTagName(Tags.SEA_SHELL, SeaShellComponent.class);
+        sceneLoader.addComponentByTagName(Tags.PEARL, PearlComponent.class);
 
         // hero component
         HeroComponent heroComponent = ComponentRetriever.create(heroEntity, HeroComponent.class, artemisWorld);

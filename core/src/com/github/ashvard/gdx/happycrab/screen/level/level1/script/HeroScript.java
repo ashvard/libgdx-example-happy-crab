@@ -8,10 +8,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.github.ashvard.gdx.happycrab.action.HeroActions;
 import com.github.ashvard.gdx.happycrab.screen.CrabAnimationState;
 import com.github.ashvard.gdx.happycrab.screen.level.Tags;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.AnimationComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.HeroComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.InputComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.PearlComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.*;
 import com.github.ashvard.gdx.simple.animation.component.SimpleAnimatorUtils;
 import com.github.ashvard.gdx.simple.animation.fsm.FsmContext;
 import com.github.ashvard.gdx.simple.input.InputActions;
@@ -36,6 +33,7 @@ public class HeroScript extends BasicScript implements PhysicsContact {
     protected ComponentMapper<InputComponent> inputMapper;
     protected ComponentMapper<AnimationComponent> animationMapper;
 
+    protected ComponentMapper<SeaShellComponent> seaShellMapper;
     protected ComponentMapper<PearlComponent> pearlMapper;
     protected ComponentMapper<HeroComponent> heroMapper;
 
@@ -154,15 +152,21 @@ public class HeroScript extends BasicScript implements PhysicsContact {
             fixturesUnderfoot.add(contactFixture);
         }
 
-        PearlComponent pearlComponent = pearlMapper.get(contactEntity);
-        if (pearlComponent != null && pearlComponent.value > 0) {
+        SeaShellComponent seaShellComponent = seaShellMapper.get(contactEntity);
+        if (seaShellComponent != null && seaShellComponent.pearlsCount > 0) {
             ItemWrapper itemWrapper = new ItemWrapper(contactEntity, engine);
             ItemWrapper child = itemWrapper.getChild(Tags.PEARL_ID);
             if (child != null) {
-                heroComponent.setPearlsCount(heroComponent.getPearlsCount() + pearlComponent.value);
-                pearlComponent.value--;
+                heroComponent.setPearlsCount(heroComponent.getPearlsCount() + seaShellComponent.pearlsCount);
+                seaShellComponent.pearlsCount--;
                 engine.delete(child.getEntity());
             }
+        }
+
+        PearlComponent pearlComponent = pearlMapper.get(contactEntity);
+        if(pearlComponent != null) {
+            heroComponent.setPearlsCount(heroComponent.getPearlsCount() + 1);
+            engine.delete(contactEntity);
         }
     }
 
