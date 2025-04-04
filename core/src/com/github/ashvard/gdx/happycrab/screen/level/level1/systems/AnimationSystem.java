@@ -1,11 +1,11 @@
-package com.github.ashvard.screen.level.level1.systems;
+package com.github.ashvard.gdx.happycrab.screen.level.level1.systems;
 
 import com.artemis.ComponentMapper;
 import com.artemis.annotations.All;
 import com.artemis.systems.IteratingSystem;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.GdxRuntimeException;
-import com.github.ashvard.screen.level.level1.systems.components.AnimationComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.AnimationComponent;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimation;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimationSystem;
 import games.rednblack.editor.renderer.components.TextureRegionComponent;

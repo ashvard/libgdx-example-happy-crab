@@ -1,4 +1,4 @@
-package com.github.ashvard.screen.level.level.physics;
+package com.github.ashvard.gdx.happycrab.screen.level.level.physics;
 
 import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Rectangle;

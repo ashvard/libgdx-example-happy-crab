@@ -1,7 +1,6 @@
 package com.github.ashvard.gdx.happycrab.screen.level.level.gameloop;
 
 import com.badlogic.gdx.utils.GdxRuntimeException;
-import com.github.ashvard.screen.level.level.gameloop.GameLoopStrategy;
 
 public class GameLoopManager {
 

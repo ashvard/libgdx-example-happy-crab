@@ -1,4 +1,4 @@
-package com.github.ashvard.action;
+package com.github.ashvard.gdx.happycrab.action;
 
 public interface HeroActions {
 

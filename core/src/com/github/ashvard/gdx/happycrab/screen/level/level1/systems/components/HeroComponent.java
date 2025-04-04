@@ -1,7 +1,6 @@
 package com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components;
 
 import com.artemis.Component;
-import com.github.ashvard.screen.level.level1.systems.components.ComponentListener;
 
 import java.util.ArrayList;
 

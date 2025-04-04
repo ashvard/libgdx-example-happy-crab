@@ -1,20 +1,20 @@
-package com.github.ashvard.screen.level.level1.script;
+package com.github.ashvard.gdx.happycrab.screen.level.level1.script;
 
 import com.artemis.ComponentMapper;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
+import com.github.ashvard.gdx.happycrab.action.HeroActions;
+import com.github.ashvard.gdx.happycrab.screen.CrabAnimationState;
+import com.github.ashvard.gdx.happycrab.screen.level.Tags;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.AnimationComponent;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.HeroComponent;
-import com.github.ashvard.screen.level.level1.systems.components.AnimationComponent;
-import com.github.ashvard.screen.level.level1.systems.components.InputComponent;
-import com.github.ashvard.screen.level.level1.systems.components.PearlComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.InputComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.PearlComponent;
 import com.github.ashvard.gdx.simple.animation.component.SimpleAnimatorUtils;
 import com.github.ashvard.gdx.simple.animation.fsm.FsmContext;
 import com.github.ashvard.gdx.simple.input.InputActions;
-import com.github.ashvard.action.HeroActions;
-import com.github.ashvard.screen.CrabAnimationState;
-import com.github.ashvard.screen.level.Tags;
 import games.rednblack.editor.renderer.components.DimensionsComponent;
 import games.rednblack.editor.renderer.components.MainItemComponent;
 import games.rednblack.editor.renderer.components.TransformComponent;

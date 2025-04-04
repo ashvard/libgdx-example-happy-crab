@@ -1,4 +1,4 @@
-package com.github.ashvard.model;
+package com.github.ashvard.gdx.happycrab.model;
 
 
 import com.badlogic.gdx.Gdx;
@@ -14,13 +14,14 @@ import com.github.ashvard.gdx.ecs.simple.system.render.RendererComponent;
 import com.github.ashvard.gdx.ecs.simple.system.script.ScriptComponent;
 import com.github.ashvard.gdx.ecs.simple.system.transform.TransformComponent;
 import com.github.ashvard.gdx.happycrab.Resources;
-import com.github.ashvard.screen.level.level.physics.PhysicsComponent;
+import com.github.ashvard.gdx.happycrab.model.scripts.CrabAnimScript;
+import com.github.ashvard.gdx.happycrab.model.scripts.CrabScript;
+import com.github.ashvard.gdx.happycrab.screen.level.level.physics.InputComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level.physics.PhysicsComponent;
 import com.github.ashvard.gdx.simple.animation.component.AnimatorDynamicPart;
 import com.github.ashvard.gdx.simple.animation.component.SimpleAnimationComponent;
 import com.github.ashvard.gdx.simple.animation.fsm.FsmContext;
-import com.github.ashvard.model.scripts.CrabAnimScript;
-import com.github.ashvard.model.scripts.CrabScript;
-import com.github.ashvard.screen.level.level.physics.InputComponent;
+
 
 public final class GameObjectFactory {
 
@@ -40,7 +41,7 @@ public final class GameObjectFactory {
 
         RendererComponent rendererComponent = new RendererComponent();
         rendererComponent.textureRegion = region;
-        rendererComponent.layer = com.github.ashvard.model.LayerEnum.BACKGROUND.name();
+        rendererComponent.layer = LayerEnum.BACKGROUND.name();
 
         return new EcsComponent[]{transformComponent, rendererComponent};
     }
@@ -59,7 +60,7 @@ public final class GameObjectFactory {
 
         RendererComponent rendererComponent = new RendererComponent();
         //rendererComponent.textureRegion = crabAtlas.findRegion("crab", 1);
-        rendererComponent.layer = com.github.ashvard.model.LayerEnum.MAIN_LAYER.name();
+        rendererComponent.layer = LayerEnum.MAIN_LAYER.name();
 
         // АНИМАЦИЯ
         AnimationComponent animationComponent = new AnimationComponent();

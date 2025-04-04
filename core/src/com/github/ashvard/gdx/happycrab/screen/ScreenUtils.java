@@ -1,4 +1,4 @@
-package com.github.ashvard.screen;
+package com.github.ashvard.gdx.happycrab.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;

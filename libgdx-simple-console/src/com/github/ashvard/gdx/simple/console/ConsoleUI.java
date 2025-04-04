@@ -156,6 +156,7 @@ public class ConsoleUI extends ScreenAdapter implements ConsoleService.ConsoleOu
 
                     try {
                         consoleService.interpretInput(consoleTextField.getText());
+                        clearTextField();
                     } catch (ConsoleException e) {
                         e.printStackTrace();
                         textArea.setText(e.getMessage());
@@ -163,6 +164,10 @@ public class ConsoleUI extends ScreenAdapter implements ConsoleService.ConsoleOu
                 }
             }
         });
+    }
+
+    public void clearTextField() {
+        consoleTextField.setText("");
     }
 
     private static void setTransparentBackground(TextField textField, Color color) {

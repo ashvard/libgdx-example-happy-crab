@@ -1,14 +1,14 @@
-package com.github.ashvard.model.scripts;
+package com.github.ashvard.gdx.happycrab.model.scripts;
 
 import com.github.ashvard.gdx.ecs.simple.engine.EcsScript;
 import com.github.ashvard.gdx.ecs.simple.system.animation.AnimationComponent;
 import com.github.ashvard.gdx.ecs.simple.system.render.RendererComponent;
 import com.github.ashvard.gdx.ecs.simple.system.transform.TransformComponent;
-import com.github.ashvard.screen.level.level.physics.PhysicsComponent;
+import com.github.ashvard.gdx.happycrab.action.HeroActions;
+import com.github.ashvard.gdx.happycrab.screen.level.level.physics.InputComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level.physics.PhysicsComponent;
 import com.github.ashvard.gdx.simple.animation.component.SimpleAnimatorUtils;
 import com.github.ashvard.gdx.simple.animation.fsm.FsmContext;
-import com.github.ashvard.action.HeroActions;
-import com.github.ashvard.screen.level.level.physics.InputComponent;
 
 /**
  * Created by user on 17.04.2017.

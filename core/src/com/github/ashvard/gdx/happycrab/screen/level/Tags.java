@@ -1,4 +1,4 @@
-package com.github.ashvard.screen.level;
+package com.github.ashvard.gdx.happycrab.screen.level;
 
 public interface Tags {
 

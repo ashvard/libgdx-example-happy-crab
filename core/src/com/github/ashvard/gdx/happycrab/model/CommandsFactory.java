@@ -1,4 +1,4 @@
-package com.github.ashvard.model;
+package com.github.ashvard.gdx.happycrab.model;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.GdxRuntimeException;

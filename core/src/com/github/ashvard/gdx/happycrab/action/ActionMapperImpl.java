@@ -7,7 +7,6 @@ import com.github.ashvard.gdx.simple.input.ActionConst;
 import com.github.ashvard.gdx.simple.input.ActionMapper;
 import com.github.ashvard.gdx.simple.input.processor.InputData;
 
-import com.github.ashvard.action.HeroActions;
 
 public class ActionMapperImpl implements ActionMapper {
 

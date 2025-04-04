@@ -14,9 +14,6 @@ import com.github.ashvard.gdx.ecs.simple.engine.debug.data.PointData;
 import com.github.ashvard.gdx.ecs.simple.engine.debug.data.RectangleData;
 import com.github.ashvard.gdx.ecs.simple.system.transform.TransformComponent;
 
-import com.github.ashvard.screen.level.level.physics.ShapePosUpdater;
-import com.github.ashvard.screen.level.level.physics.PhysicsComponent;
-
 public class PhysicsSystem extends DebugSystem {
 
     private IdentityMap<Class, ShapePosUpdater> shapeUpdaters;

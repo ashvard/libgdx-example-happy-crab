@@ -24,21 +24,22 @@ import com.github.ashvard.gdx.ecs.simple.system.render.ShaderUpdater;
 import com.github.ashvard.gdx.ecs.simple.system.script.ScriptSystem;
 import com.github.ashvard.gdx.happycrab.Resources;
 import com.github.ashvard.gdx.happycrab.action.ActionMapperImpl;
+import com.github.ashvard.gdx.happycrab.model.CommandsFactory;
+import com.github.ashvard.gdx.happycrab.model.GameObjectFactory;
+import com.github.ashvard.gdx.happycrab.model.GameWorldSettings;
 import com.github.ashvard.gdx.happycrab.screen.level.level.gameloop.GameLoopManager;
+import com.github.ashvard.gdx.happycrab.screen.level.level.gameloop.GameLoopStrategy;
+import com.github.ashvard.gdx.happycrab.screen.level.level.physics.InputComponent;
 import com.github.ashvard.gdx.happycrab.screen.level.level.physics.PhysicsSystem;
-import com.github.ashvard.model.CommandsFactory;
-import com.github.ashvard.model.GameObjectFactory;
-import com.github.ashvard.model.GameWorldSettings;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimation;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimationSyncLoader;
 import com.github.ashvard.gdx.simple.console.Console;
 import com.github.ashvard.gdx.simple.console.ConsoleOffOnCallback;
 import com.github.ashvard.gdx.simple.structure.screen.AbstractGameScreen;
 import com.github.ashvard.gdx.simple.input.InputSystem;
-import com.github.ashvard.screen.level.level.gameloop.GameLoopStrategy;
-import com.github.ashvard.screen.level.level.physics.InputComponent;
 
-import static com.github.ashvard.model.LayerEnum.*;
+import static com.github.ashvard.gdx.happycrab.model.LayerEnum.*;
+
 
 public class Level0Screen extends AbstractGameScreen {
 
@@ -180,6 +181,7 @@ public class Level0Screen extends AbstractGameScreen {
         //todo Плохо, что здесь завязка на скин в контейнере
         Console console = new Console(
                 Input.Keys.F9,
+                Input.Keys.F10,
                 DebugDrawObject.DEFAULT_SKIN,
                 new StretchViewport(
                         gameWorldSettings.virtualWidth,

@@ -1,4 +1,4 @@
-package com.github.ashvard.model;
+package com.github.ashvard.gdx.happycrab.model;
 
 public class GameWorldSettings {
 

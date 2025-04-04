@@ -1,4 +1,4 @@
-package com.github.ashvard.screen.level.level.gameloop;
+package com.github.ashvard.gdx.happycrab.screen.level.level.gameloop;
 
 public interface GameLoopStrategy  {
 

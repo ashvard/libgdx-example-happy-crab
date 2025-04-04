@@ -1,4 +1,4 @@
-package com.github.ashvard.screen;
+package com.github.ashvard.gdx.happycrab.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
@@ -14,11 +14,11 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.github.ashvard.gdx.happycrab.Resources;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.ComponentListener;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.HeroComponent;
 import com.github.ashvard.gdx.simple.structure.GameSettings;
 import com.github.ashvard.gdx.simple.structure.screen.AbstractGameScreen;
 
-import com.github.ashvard.screen.level.level1.systems.components.ComponentListener;
 
 public class HUD extends AbstractGameScreen implements ComponentListener<HeroComponent> {
 
@@ -147,7 +147,7 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
 
     private void updateFont(int virtualHeight) {
         int size = Gdx.graphics.getHeight() * 24 / virtualHeight;
-        font = com.github.ashvard.screen.ScreenUtils.generateBitmapFont(Gdx.files.internal("fonts/unlearn/unlearn2.ttf"), Color.WHITE, size);
+        font = ScreenUtils.generateBitmapFont(Gdx.files.internal("fonts/unlearn/unlearn2.ttf"), Color.WHITE, size);
     }
 
     private Label.LabelStyle createLabelStyle(BitmapFont font) {
@@ -167,7 +167,7 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
 
     private void createOrUpdateLabels(String text) {
         if (textLabel == null) {
-            textLabel = com.github.ashvard.screen.ScreenUtils.createLabel(text, textLabelStyle);
+            textLabel = ScreenUtils.createLabel(text, textLabelStyle);
         }
         textLabel.setStyle(textLabelStyle);
     }

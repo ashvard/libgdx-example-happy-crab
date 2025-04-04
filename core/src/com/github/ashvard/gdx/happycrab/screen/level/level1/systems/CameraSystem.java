@@ -1,4 +1,4 @@
-package com.github.ashvard.screen.level.level1.systems;
+package com.github.ashvard.gdx.happycrab.screen.level.level1.systems;
 
 import com.artemis.ComponentMapper;
 import com.artemis.annotations.All;

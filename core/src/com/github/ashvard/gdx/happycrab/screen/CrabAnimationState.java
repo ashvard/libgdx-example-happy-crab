@@ -1,4 +1,4 @@
-package com.github.ashvard.screen;
+package com.github.ashvard.gdx.happycrab.screen;
 
 public interface CrabAnimationState {
 

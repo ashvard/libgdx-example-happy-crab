@@ -5,6 +5,7 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.github.ashvard.gdx.simple.console.exception.ConsoleException;
@@ -29,23 +30,23 @@ public class Console extends ScreenAdapter {
     private ConsoleService consoleService;
     private ConsoleUI consoleUI;
 
-    public Console(int activationKeyCode, Skin skin, ConsoleOffOnCallback offOnCallback) {
-        this(activationKeyCode, skin, new ScreenViewport(), offOnCallback);
+    public Console(int activationKeyCode, int clearConsoleKeyCode, Skin skin, ConsoleOffOnCallback offOnCallback) {
+        this(activationKeyCode, clearConsoleKeyCode, skin, new ScreenViewport(), offOnCallback);
     }
 
-    public Console(int activationKeyCode, Skin skin, boolean isActiveDebugData, ConsoleOffOnCallback offOnCallback) {
-        this(activationKeyCode, skin, new ScreenViewport(), isActiveDebugData, offOnCallback);
+    public Console(int activationKeyCode, int clearConsoleKeyCode, Skin skin, boolean isActiveDebugData, ConsoleOffOnCallback offOnCallback) {
+        this(activationKeyCode, clearConsoleKeyCode, skin, new ScreenViewport(), isActiveDebugData, offOnCallback);
     }
 
-    public Console(int activationKeyCode, Skin skin, Viewport viewport, ConsoleOffOnCallback offOnCallback) {
-        this(activationKeyCode, skin, viewport, offOnCallback, false, new ConsolePlugin[0]);
+    public Console(int activationKeyCode, int clearConsoleKeyCode, Skin skin, Viewport viewport, ConsoleOffOnCallback offOnCallback) {
+        this(activationKeyCode, clearConsoleKeyCode, skin, viewport, offOnCallback, false, new ConsolePlugin[0]);
     }
 
-    public Console(int activationKeyCode, Skin skin, Viewport viewport, boolean isShowDebugData, ConsoleOffOnCallback offOnCallback) {
-        this(activationKeyCode, skin, viewport, offOnCallback, isShowDebugData, new ConsolePlugin[0]);
+    public Console(int activationKeyCode, int clearConsoleKeyCode, Skin skin, Viewport viewport, boolean isShowDebugData, ConsoleOffOnCallback offOnCallback) {
+        this(activationKeyCode, clearConsoleKeyCode, skin, viewport, offOnCallback, isShowDebugData, new ConsolePlugin[0]);
     }
 
-    public Console(int activationKeyCode, Skin skin, Viewport viewport,
+    public Console(int activationKeyCode, int clearConsoleKeyCode, Skin skin, Viewport viewport,
                    ConsoleOffOnCallback offOnCallback, boolean isShowDebugData, ConsolePlugin... plugins) {
         this.offOnCallback = offOnCallback;
         this.plugins = plugins;
@@ -53,7 +54,7 @@ public class Console extends ScreenAdapter {
         consoleService = new ConsoleService();
         consoleUI = new ConsoleUI(consoleService, skin, viewport, isShowDebugData);
 
-        ActivateConsoleInputProcessor activateConsoleInputProcessor = new ActivateConsoleInputProcessor(activationKeyCode);
+        ActivateConsoleInputProcessor activateConsoleInputProcessor = new ActivateConsoleInputProcessor(activationKeyCode, clearConsoleKeyCode);
         InputProcessorWrapper inputProcessorWrapper = createInputProcessorWrapper(consoleUI.getInputProcessor());
 
         InputProcessor[] processors = new InputProcessor[2 + plugins.length];
@@ -103,9 +104,14 @@ public class Console extends ScreenAdapter {
     private class ActivateConsoleInputProcessor extends InputAdapter {
 
         private final int activationKeyCode;
+        private final int clearConsoleKeyCode;
 
-        public ActivateConsoleInputProcessor(int activationKeyCode) {
+        public ActivateConsoleInputProcessor(int activationKeyCode, int clearConsoleKeyCode) {
+            if (activationKeyCode == clearConsoleKeyCode) {
+                throw new GdxRuntimeException("activationKeyCode = clearConsoleKeyCode = " + activationKeyCode);
+            }
             this.activationKeyCode = activationKeyCode;
+            this.clearConsoleKeyCode = clearConsoleKeyCode;
         }
 
         @Override
@@ -116,6 +122,9 @@ public class Console extends ScreenAdapter {
                     offOnCallback.call(isConsoleActive);
                 }
                 return true;
+            }
+            if (clearConsoleKeyCode == keycode) {
+                consoleUI.clearTextField();
             }
             return false;
         }

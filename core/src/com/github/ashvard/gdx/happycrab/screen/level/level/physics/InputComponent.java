@@ -1,4 +1,4 @@
-package com.github.ashvard.screen.level.level.physics;
+package com.github.ashvard.gdx.happycrab.screen.level.level.physics;
 
 import com.github.ashvard.gdx.ecs.simple.engine.EcsComponent;
 import com.github.ashvard.gdx.simple.input.InputActions;
