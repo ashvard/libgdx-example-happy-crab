@@ -7,9 +7,9 @@ import com.github.ashvard.gdx.ecs.simple.system.render.RendererComponent;
 import com.github.ashvard.gdx.ecs.simple.system.transform.TransformComponent;
 import com.github.ashvard.gdx.happycrab.action.HeroActions;
 import com.github.ashvard.gdx.happycrab.model.LayerEnum;
-import com.github.ashvard.gdx.happycrab.screen.level.level.gameloop.GameLoopManager;
-import com.github.ashvard.gdx.happycrab.screen.level.level.physics.InputComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level.physics.PhysicsComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.gameloop.GameLoopManager;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.physics.InputComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.physics.PhysicsComponent;
 
 /**
  * Created by user on 16.04.2017.

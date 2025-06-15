@@ -10,4 +10,7 @@ public interface Tags {
     String HERO_ID = "hero";
 
     String PEARL = "pearl";
+
+    String PLATFORM_1_ID = "platform1";
+
 }

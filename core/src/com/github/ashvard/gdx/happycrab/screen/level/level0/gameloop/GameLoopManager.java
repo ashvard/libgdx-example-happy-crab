@@ -1,4 +1,4 @@
-package com.github.ashvard.gdx.happycrab.screen.level.level.gameloop;
+package com.github.ashvard.gdx.happycrab.screen.level.level0.gameloop;
 
 import com.badlogic.gdx.utils.GdxRuntimeException;
 

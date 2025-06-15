@@ -15,6 +15,7 @@ import com.github.ashvard.gdx.happycrab.screen.level.Tags;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.script.HeroScript;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.AnimationSystem;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.CameraSystem;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.PlatformSystem;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.*;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimation;
 import com.github.ashvard.gdx.simple.structure.screen.AbstractGameScreen;
@@ -61,6 +62,7 @@ public class Level1Screen extends AbstractGameScreen {
         AnimationSystem animationSystem = new AnimationSystem();
         animationSystem.addAnimation(assetManager.<SimpleAnimation>get(Resources.Animations.CRAB_ANIM_FSM));
 
+        config.addSystem(new PlatformSystem());
         config.addSystem(cameraSystem);
         config.addSystem(animationSystem);
 
@@ -68,12 +70,16 @@ public class Level1Screen extends AbstractGameScreen {
         artemisWorld = sceneLoader.getEngine();
 
         // после new SceneLoader(config) должны быть добавления новых компонент во фреймворк
+        ComponentRetriever.addMapper(PlatformComponent.class);
         ComponentRetriever.addMapper(AnimationComponent.class);
         ComponentRetriever.addMapper(InputComponent.class);
         ComponentRetriever.addMapper(HeroComponent.class);
 
         sceneLoader.loadScene("MainScene", viewport);
         ItemWrapper root = new ItemWrapper(sceneLoader.getRoot(), artemisWorld);
+
+        // platforms
+        initPlatforms(root);
 
         // hero
         ItemWrapper hero = root.getChild(Tags.HERO_ID);
@@ -102,6 +108,18 @@ public class Level1Screen extends AbstractGameScreen {
         heroComponent.setLifeCount(4);
         heroComponent.addListener(hud);
         heroComponent.notifyListeners();
+    }
+
+    private void initPlatforms(ItemWrapper root) {
+        ItemWrapper platform1 = root.getChild(Tags.PLATFORM_1_ID);
+        int platformEntity = platform1.getEntity();
+        PlatformComponent platform1Component = ComponentRetriever.create(platformEntity, PlatformComponent.class, artemisWorld);
+        platform1Component.isPingPong = true;
+        platform1Component.startX = 11.84f + 1.09f / 2f;
+        platform1Component.startY = 5.4f + 0.14f / 2f;
+        platform1Component.endX = 12.84f + 1.09f / 2f; // platform1Component.startX;
+        platform1Component.endY = 6.4f + 0.14f / 2f;
+        platform1Component.timeMs = 2f;
     }
 
     @Override

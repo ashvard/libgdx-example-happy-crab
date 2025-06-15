@@ -116,18 +116,18 @@ public class ConsoleUI extends ScreenAdapter implements ConsoleService.ConsoleOu
             Table table = new Table(skin);
             table.add(FPS).right();
             table.add(fpsLabel).right();
-            table.row();
-            table.add(DRAW_CALLS).right();
-            table.add(drawCallsLabel).right();
-            table.row();
-            table.add(SHADER_SWITCHES).right();
-            table.add(shaderSwitchesLabel).right();
-            table.row();
-            table.add(TEXTURE_BINDINGS).right();
-            table.add(textureBindingsLabel).right();
-            table.row();
-            table.add(VERTEX_COUNT).right();
-            table.add(vertexCountLabel).right();
+//            table.row();
+//            table.add(DRAW_CALLS).right();
+//            table.add(drawCallsLabel).right();
+//            table.row();
+//            table.add(SHADER_SWITCHES).right();
+//            table.add(shaderSwitchesLabel).right();
+//            table.row();
+//            table.add(TEXTURE_BINDINGS).right();
+//            table.add(textureBindingsLabel).right();
+//            table.row();
+//            table.add(VERTEX_COUNT).right();
+//            table.add(vertexCountLabel).right();
             windowTable.add(table).top().right().expand();
         }
 

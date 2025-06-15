@@ -1,8 +1,8 @@
 package com.github.ashvard.gdx.happycrab.screen;
 
 
-import com.github.ashvard.gdx.happycrab.screen.level.level.Level0AssetLoader;
-import com.github.ashvard.gdx.happycrab.screen.level.level.Level0Screen;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.Level0AssetLoader;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.Level0Screen;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.Level1AssetLoader;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.Level1Screen;
 import com.github.ashvard.gdx.simple.structure.screen.statemachine.GameScreenState;

@@ -1,9 +1,8 @@
-package com.github.ashvard.gdx.happycrab.screen.level.level.physics;
+package com.github.ashvard.gdx.happycrab.screen.level.level0.physics;
 
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.*;
-import com.badlogic.gdx.utils.IdentityMap;
 import com.badlogic.gdx.utils.IntMap;
 import com.github.ashvard.gdx.ecs.simple.engine.EcsEntity;
 import com.github.ashvard.gdx.ecs.simple.engine.debug.DebugDataContainer;
@@ -16,15 +15,10 @@ import com.github.ashvard.gdx.ecs.simple.system.transform.TransformComponent;
 
 public class PhysicsSystem extends DebugSystem {
 
-    private IdentityMap<Class, ShapePosUpdater> shapeUpdaters;
     private final Vector2 gravity = new Vector2(0, -4f);
 
     public PhysicsSystem() {
         super(TransformComponent.class, PhysicsComponent.class);
-
-        shapeUpdaters = new IdentityMap<Class, ShapePosUpdater>();
-        shapeUpdaters.put(Circle.class, new CirclePosUpdater());
-        shapeUpdaters.put(Rectangle.class, new RectanglePosUpdater());
     }
 
     // подумать, может эти батчи через прокси сделать, как транзакции
@@ -38,23 +32,6 @@ public class PhysicsSystem extends DebugSystem {
             transform.position.add(physics.velocity.scl(delta));
             blockGround(transform, physics);
         }
-    }
-
-    private void fillDebugData(DebugDataContainer debugDataContainer, Shape2D shape, TransformComponent transform) {
-        DebugData debugData = null;
-        PointData pointData = null;
-        Vector2 position = transform.position;
-        if (Circle.class == shape.getClass()) {
-            Circle circle = (Circle) shape;
-            debugData = new CircleData(position.x, position.y, circle.radius, transform.rotation);
-            pointData = new PointData(position.x, position.y);
-        } else if (Rectangle.class == shape.getClass()) {
-            Rectangle rect = (Rectangle) shape;
-            debugData = new RectangleData(position.x, position.y, rect.width, rect.height);
-            pointData = new PointData(position.x, position.y);
-        }
-        debugDataContainer.put(debugData);
-        debugDataContainer.put(pointData);
     }
 
     private void blockGround(TransformComponent transform, PhysicsComponent physics) {

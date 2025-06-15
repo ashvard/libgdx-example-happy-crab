@@ -38,7 +38,7 @@ public class HappyCrabSimpleGame extends AbstractSimpleGame<UserFactoryImpl> {
 
     @Override
     protected GameScreenState createStartState() {
-        return GameScreens.LEVEL_0;
+        return GameScreens.LEVEL_1;
     }
 
     @Override

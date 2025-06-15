@@ -1,4 +1,4 @@
-package com.github.ashvard.gdx.happycrab.screen.level.level;
+package com.github.ashvard.gdx.happycrab.screen.level.level0;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;

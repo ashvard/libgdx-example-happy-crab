@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.github.ashvard.gdx.ecs.simple.engine.EcsContainer;
 import com.github.ashvard.gdx.happycrab.screen.GameScreens;
-import com.github.ashvard.gdx.happycrab.screen.level.level.gameloop.GameLoopManager;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.gameloop.GameLoopManager;
 import com.github.ashvard.gdx.simple.console.Command;
 import com.github.ashvard.gdx.simple.console.exception.CommandExecutionException;
 import com.github.ashvard.gdx.simple.structure.GameManager;

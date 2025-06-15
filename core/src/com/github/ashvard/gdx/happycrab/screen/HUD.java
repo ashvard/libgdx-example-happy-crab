@@ -5,13 +5,11 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
-import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.github.ashvard.gdx.happycrab.Resources;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.ComponentListener;
@@ -32,7 +30,7 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
     private Label.LabelStyle textLabelStyle;
     private BitmapFont font;
 
-    private Image heroLifeCountImage;
+    private Group heroLifeGroup;
 
     private int pearlsCount;
     private int lifeCount;
@@ -43,8 +41,9 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
         stage = new Stage(new ExtendViewport(gameSettings.getVirtualScreenWidth(), gameSettings.getVirtualScreenHeight()));
         rootTable = createRootTable();
 
+        heroLifeGroup = new Group();
         // Add widgets to the table here.
-        table = createTable();
+        table = createTable(heroLifeGroup);
         rootTable.add(table).top().left().padLeft(16).padTop(16).expand();
 
         //rootTable.setDebug(true); // This is optional, but enables debug lines for tables.
@@ -60,13 +59,12 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
         return rootTable;
     }
 
-    private Table createTable() {
+    private Table createTable(Group heroLifeGroup) {
         AssetManager assetManager = getGameManager().assetManager;
         TextureAtlas textureAtlas = assetManager.get(Resources.TextureAtlases.PACK);
-        TextureAtlas.AtlasRegion pearlAR = textureAtlas.findRegion(Resources.Images.PEARL);
+        TextureAtlas.AtlasRegion pearlAtlasRegion = textureAtlas.findRegion(Resources.Images.PEARL);
 
-        heroLifeCountImage = new Image(textureAtlas.findRegion(Resources.Images.LIFE_4));
-        Image pearlsCountImage = new Image(pearlAR);
+        Image pearlsCountImage = new Image(pearlAtlasRegion);
 
         updateFont(getGameManager().gameSettings.getVirtualScreenWidth());
         textLabelStyle = createLabelStyle(font);
@@ -74,7 +72,7 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
 
         Table table = new Table();
         table.columnDefaults(1).width(50);
-        table.add(heroLifeCountImage).left().pad(2).colspan(2);
+        table.add(heroLifeGroup).left().pad(2).colspan(2);
         table.row();
         table.add(pearlsCountImage).left().pad(4);
         table.add(pearlsCountLabel).left().fillX();
@@ -84,11 +82,25 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
         return table;
     }
 
+    private void changeHeroLife(Group group, int lifeCount) {
+        if (group.getChildren().size == lifeCount) {
+            return;
+        }
+
+        AssetManager assetManager = getGameManager().assetManager;
+        TextureAtlas textureAtlas = assetManager.get(Resources.TextureAtlases.PACK);
+        group.clear();
+        for (int i = 0; i < lifeCount; i++) {
+            Image image = new Image(textureAtlas.findRegion(Resources.Images.LIFE_1));
+            image.setPosition(i * 24, 0);
+            group.addActor(image);
+        }
+    }
+
     @Override
     public void render(float delta) {
         pearlsCountLabel.setText(pearlsCount);
-        TextureRegionDrawable drawable = (TextureRegionDrawable) heroLifeCountImage.getDrawable();
-        drawable.setRegion(getCrabLifeTexture(lifeCount));
+        changeHeroLife(heroLifeGroup, lifeCount);
 
         stage.act(delta);
         stage.draw();
@@ -120,23 +132,6 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
     public void update(HeroComponent component) {
         pearlsCount = component.getPearlsCount();
         lifeCount = component.getLifeCount();
-    }
-
-    private TextureRegion getCrabLifeTexture(int lifeCount) {
-        AssetManager assetManager = getGameManager().assetManager;
-        TextureAtlas textureAtlas = assetManager.get(Resources.TextureAtlases.PACK);
-        switch (lifeCount) {
-            case 1:
-                return textureAtlas.findRegion(Resources.Images.LIFE_1);
-            case 2:
-                return textureAtlas.findRegion(Resources.Images.LIFE_2);
-            case 3:
-                return textureAtlas.findRegion(Resources.Images.LIFE_3);
-            case 4:
-                return textureAtlas.findRegion(Resources.Images.LIFE_4);
-            default:
-                throw new GdxRuntimeException("lifeCount out of range [1;4]. lifeCount=" + lifeCount);
-        }
     }
 
     private void createOrUpdateFontAndLabels(String text, int virtualHeight) {

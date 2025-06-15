@@ -1,4 +1,4 @@
-package com.github.ashvard.gdx.happycrab.screen.level.level;
+package com.github.ashvard.gdx.happycrab.screen.level.level0;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -27,10 +27,10 @@ import com.github.ashvard.gdx.happycrab.action.ActionMapperImpl;
 import com.github.ashvard.gdx.happycrab.model.CommandsFactory;
 import com.github.ashvard.gdx.happycrab.model.GameObjectFactory;
 import com.github.ashvard.gdx.happycrab.model.GameWorldSettings;
-import com.github.ashvard.gdx.happycrab.screen.level.level.gameloop.GameLoopManager;
-import com.github.ashvard.gdx.happycrab.screen.level.level.gameloop.GameLoopStrategy;
-import com.github.ashvard.gdx.happycrab.screen.level.level.physics.InputComponent;
-import com.github.ashvard.gdx.happycrab.screen.level.level.physics.PhysicsSystem;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.gameloop.GameLoopManager;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.gameloop.GameLoopStrategy;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.physics.InputComponent;
+import com.github.ashvard.gdx.happycrab.screen.level.level0.physics.PhysicsSystem;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimation;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimationSyncLoader;
 import com.github.ashvard.gdx.simple.console.Console;

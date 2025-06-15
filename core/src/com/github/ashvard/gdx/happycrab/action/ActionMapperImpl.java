@@ -12,7 +12,7 @@ public class ActionMapperImpl implements ActionMapper {
 
     @Override
     public int getAction(float deltaTime, InputData inputData, Controller controller) {
-        boolean isJump = controller.getButton(controller.getMapping().buttonA) || Gdx.input.isKeyPressed(Input.Keys.UP);
+        boolean isJump = controller.getButton(controller.getMapping().buttonA) || Gdx.input.isKeyPressed(Input.Keys.SPACE);
         if (isJump) {
             return HeroActions.JUMP;
         }

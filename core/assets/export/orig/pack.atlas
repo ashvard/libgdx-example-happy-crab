@@ -2,28 +2,22 @@ pack.png
 	size: 2048, 1024
 	filter: Linear, Linear
 background
-	bounds: 1, 109, 1600, 900
+	bounds: 1, 103, 1600, 900
 column
-	bounds: 1603, 879, 66, 130
+	bounds: 1603, 873, 66, 130
 column_box
-	bounds: 1603, 839, 20, 20
+	bounds: 1671, 972, 20, 20
 hero
-	bounds: 1, 37, 75, 70
+	bounds: 1, 31, 75, 70
 life1
-	bounds: 78, 59, 17, 16
-life2
-	bounds: 1750, 993, 37, 16
-life3
-	bounds: 1603, 861, 57, 16
-life4
-	bounds: 1671, 993, 77, 16
+	bounds: 1603, 823, 17, 16
 pearl
-	bounds: 110, 94, 13, 13
+	bounds: 1635, 858, 13, 13
 platform
-	bounds: 1, 26, 70, 9
+	bounds: 1671, 994, 70, 9
 sand
-	bounds: 78, 77, 30, 30
+	bounds: 1603, 841, 30, 30
 seashell
-	bounds: 1, 1, 33, 23
+	bounds: 78, 78, 33, 23
 stone
-	bounds: 1671, 963, 30, 28
+	bounds: 1, 1, 30, 28
