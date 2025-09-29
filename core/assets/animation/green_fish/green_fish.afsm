@@ -1,0 +1,120 @@
+{
+"name": "green_fish",
+"animators": [
+	{
+		"name": "spike_idle",
+		"frameFrequency": 30,
+		"mode": "LOOP_PINGPONG",
+		"from": 224,
+		"to": 246,
+		"looping": true
+	},
+	{
+		"name": "swimming",
+		"frameFrequency": 30,
+		"mode": "LOOP_PINGPONG",
+		"from": 136,
+		"to": 155,
+		"looping": true
+	},
+	{
+		"name": "to_spike",
+		"frameFrequency": 30,
+		"mode": "NORMAL",
+		"from": 155,
+		"to": 224
+	},
+	{
+		"name": "from_spike",
+		"frameFrequency": 30,
+		"mode": "REVERSED",
+		"from": 155,
+		"to": 224
+	},
+	{
+		"name": "death",
+		"frameFrequency": 30,
+		"mode": "NORMAL",
+		"from": 247,
+		"to": 288
+	},
+	{
+		"name": "idle",
+		"frameFrequency": 30,
+		"mode": "LOOP",
+		"to": 135,
+		"looping": true
+	}
+],
+"fsm": {
+	"states": [
+		"spike_idle",
+		"swimming",
+		"to_spike",
+		"from_spike",
+		"death",
+		"idle"
+	],
+	"startState": "idle",
+    "endState": "death",
+	"transitions": [
+		{
+		   "from": "ANY_STATE",
+           "to": "death",
+			"fsmPredicates": [
+				"is_death == true"
+			]
+		},
+		{
+		    "from": "ANY_STATE",
+            "to": "swimming",
+			"fsmPredicates": [
+				"is_swimming == true"
+			]
+		},
+		{
+		    "from": "swimming",
+            "to": "to_spike",
+			"fsmPredicates": [
+				"is_to_spike == true"
+			]
+		},
+		{
+		    "from": "ANY_STATE",
+            "to": "idle",
+			"fsmPredicates": [
+				"is_idle == true"
+			]
+		},
+		{
+		    "from": "idle",
+            "to": "to_spike",
+			"fsmPredicates": [
+				"is_to_spike == true"
+			]
+		},
+		{
+		    "from": "to_spike",
+            "to": "spike_idle",
+			"fsmPredicates": [
+				"is_to_spike_idle == true"
+			]
+		},
+		{
+		    "from": "spike_idle",
+            "to": "from_spike",
+			"fsmPredicates": [
+				"is_to_spike_from == true"
+			]
+		}
+	],
+	"variables": {
+		"is_death": "Boolean",
+		"is_idle": "Boolean",
+		"is_to_spike_idle": "Boolean",
+		"is_swimming": "Boolean",
+		"is_to_spike": "Boolean",
+		"is_to_spike_from": "Boolean"
+	}
+}
+}

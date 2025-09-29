@@ -1,8 +1,6 @@
 package com.github.ashvard.gdx.happycrab.model;
 
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
@@ -22,16 +20,12 @@ import com.github.ashvard.gdx.simple.animation.component.AnimatorDynamicPart;
 import com.github.ashvard.gdx.simple.animation.component.SimpleAnimationComponent;
 import com.github.ashvard.gdx.simple.animation.fsm.FsmContext;
 
+import com.github.ashvard.gdx.happycrab.screen.level.level1.script.GreenFishAnim;
+
 
 public final class GameObjectFactory {
 
     private GameObjectFactory() {
-    }
-
-    private static final Texture background;
-
-    static {
-        background = new Texture(Gdx.files.internal("background.png"));
     }
 
     public static EcsComponent[] createBackground(TextureRegion region) {
@@ -81,5 +75,16 @@ public final class GameObjectFactory {
         return new SimpleAnimationComponent(Resources.Animations.CRAB, fsmContext, animatorDynamicPart);
     }
 
+    public static SimpleAnimationComponent createAnimationComponentGreenFish() {
+        FsmContext fsmContext = new FsmContext();
+        fsmContext.insert(GreenFishAnim.IS_IDLE, true);
+        fsmContext.insert(GreenFishAnim.IS_DEATH, false);
+        fsmContext.insert(GreenFishAnim.IS_SWIMMING, false);
+        fsmContext.insert(GreenFishAnim.IS_TO_SPIKE, false);
+        fsmContext.insert(GreenFishAnim.IS_TO_SPIKE_IDLE, false);
+
+        AnimatorDynamicPart animatorDynamicPart = new AnimatorDynamicPart(/*animatorIdle*/);
+        return new SimpleAnimationComponent(Resources.Animations.GREEN_FISH, fsmContext, animatorDynamicPart);
+    }
 
 }

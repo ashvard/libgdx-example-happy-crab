@@ -26,9 +26,26 @@ public class PlatformSystem extends IteratingSystem {
 
         Transform transform = physicsBodyComponent.body.getTransform();
         Vector2 position = transform.getPosition();
+        // достигнута конечная точка по Х
         if (
-                EqualsUtils.isEquals(position.x, platformComponent.endX, 0.005f) ||
-                        EqualsUtils.isEquals(position.y, platformComponent.endY, 0.005f)
+                (platformComponent.endX - platformComponent.startX > 0 &&
+                        position.x - platformComponent.endX > 0f
+                ) || (platformComponent.endX - platformComponent.startX < 0 &&
+                        position.x - platformComponent.endX < 0f
+                )
+        ) {
+            if (platformComponent.isPingPong) {
+                physicsBodyComponent.body.setLinearVelocity(platformComponent.getReverseVector());
+            } else {
+                physicsBodyComponent.body.setLinearVelocity(Vector2.Zero);
+            }
+        } else if (
+            // достигнута конечная точка по Y
+                (platformComponent.endY - platformComponent.startY > 0 &&
+                        position.y - platformComponent.endY > 0f
+                ) || (platformComponent.endY - platformComponent.startY < 0 &&
+                        position.y - platformComponent.endY < 0f
+                )
         ) {
             if (platformComponent.isPingPong) {
                 physicsBodyComponent.body.setLinearVelocity(platformComponent.getReverseVector());
@@ -37,14 +54,31 @@ public class PlatformSystem extends IteratingSystem {
             }
         }
 
+        // достигнута начальная точка по Х
         if (
-                EqualsUtils.isEquals(position.x, platformComponent.startX, 0.005f) ||
-                        EqualsUtils.isEquals(position.y, platformComponent.startY, 0.005f)
+                (platformComponent.endX - platformComponent.startX > 0 &&
+                        position.x - platformComponent.startX < 0f
+                ) || (platformComponent.endX - platformComponent.startX < 0 &&
+                        position.x - platformComponent.startX > 0f
+                )
+        ) {
+            if (platformComponent.isPingPong) {
+                physicsBodyComponent.body.setLinearVelocity(platformComponent.velocity);
+            }
+        } else if (
+            // достигнута начальная точка по y
+                (platformComponent.endY - platformComponent.startY > 0 &&
+                        position.y - platformComponent.startY < 0f
+                ) || (platformComponent.endY - platformComponent.startY < 0 &&
+                        position.y - platformComponent.startY > 0f
+                )
         ) {
             if (platformComponent.isPingPong) {
                 physicsBodyComponent.body.setLinearVelocity(platformComponent.velocity);
             }
         }
+
+
 
     }
 

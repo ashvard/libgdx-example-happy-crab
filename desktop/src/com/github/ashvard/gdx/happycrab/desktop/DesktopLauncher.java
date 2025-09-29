@@ -10,7 +10,7 @@ public class DesktopLauncher {
 		config.setTitle("happy crab");
 
 		config.setWindowedMode(1766, 1024);
-		//config.setForegroundFPS(60);
+		config.setForegroundFPS(60);
 		//config.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
 		new Lwjgl3Application(new HappyCrabSimpleGame(), config);
 	}

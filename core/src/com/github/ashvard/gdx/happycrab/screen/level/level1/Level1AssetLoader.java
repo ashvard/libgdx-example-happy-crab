@@ -13,6 +13,7 @@ public class Level1AssetLoader implements AssetsLoader {
         assetManager.load(Resources.HyperLap2D.PROJECT, AsyncResourceManager.class);
 
         assetManager.load(Resources.Animations.CRAB_ANIM_FSM, SimpleAnimation.class);
+        assetManager.load(Resources.Animations.GREEN_FISH_FSM, SimpleAnimation.class);
     }
 
     @Override
@@ -20,6 +21,7 @@ public class Level1AssetLoader implements AssetsLoader {
         assetManager.unload(Resources.HyperLap2D.PROJECT);
 
         assetManager.unload(Resources.Animations.CRAB_ANIM_FSM);
+        assetManager.unload(Resources.Animations.GREEN_FISH_FSM);
     }
 
 }

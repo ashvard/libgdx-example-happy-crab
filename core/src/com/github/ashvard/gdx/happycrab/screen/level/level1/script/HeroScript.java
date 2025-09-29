@@ -164,7 +164,7 @@ public class HeroScript extends BasicScript implements PhysicsContact {
         }
 
         PearlComponent pearlComponent = pearlMapper.get(contactEntity);
-        if(pearlComponent != null) {
+        if (pearlComponent != null) {
             heroComponent.setPearlsCount(heroComponent.getPearlsCount() + 1);
             engine.delete(contactEntity);
         }
