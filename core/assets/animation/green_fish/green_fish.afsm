@@ -19,7 +19,7 @@
 	},
 	{
 		"name": "to_spike",
-		"frameFrequency": 30,
+		"frameFrequency": 60,
 		"mode": "NORMAL",
 		"from": 155,
 		"to": 224

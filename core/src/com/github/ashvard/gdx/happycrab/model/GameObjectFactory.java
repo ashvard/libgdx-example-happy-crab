@@ -61,7 +61,8 @@ public final class GameObjectFactory {
         animationComponent.simpleAnimationComponent = createAnimationComponentCrab();
         // АНИМАЦИЯ
 
-        return new EcsComponent[]{transformComponent, physicsComponent, scriptComponent, rendererComponent, animationComponent, inputComponent};
+        return new EcsComponent[]{transformComponent, physicsComponent, scriptComponent,
+                rendererComponent, animationComponent, inputComponent};
     }
 
     public static SimpleAnimationComponent createAnimationComponentCrab() {
@@ -77,11 +78,11 @@ public final class GameObjectFactory {
 
     public static SimpleAnimationComponent createAnimationComponentGreenFish() {
         FsmContext fsmContext = new FsmContext();
-        fsmContext.insert(GreenFishAnim.IS_IDLE, true);
-        fsmContext.insert(GreenFishAnim.IS_DEATH, false);
-        fsmContext.insert(GreenFishAnim.IS_SWIMMING, false);
-        fsmContext.insert(GreenFishAnim.IS_TO_SPIKE, false);
-        fsmContext.insert(GreenFishAnim.IS_TO_SPIKE_IDLE, false);
+        fsmContext.insert(GreenFishAnim.Transition.IS_IDLE, true);
+        fsmContext.insert(GreenFishAnim.Transition.IS_DEATH, false);
+        fsmContext.insert(GreenFishAnim.Transition.IS_SWIMMING, false);
+        fsmContext.insert(GreenFishAnim.Transition.IS_TO_SPIKE, false);
+        fsmContext.insert(GreenFishAnim.Transition.IS_TO_SPIKE_IDLE, false);
 
         AnimatorDynamicPart animatorDynamicPart = new AnimatorDynamicPart(/*animatorIdle*/);
         return new SimpleAnimationComponent(Resources.Animations.GREEN_FISH, fsmContext, animatorDynamicPart);

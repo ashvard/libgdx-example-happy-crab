@@ -44,7 +44,7 @@ public class HUD extends AbstractGameScreen implements ComponentListener<HeroCom
         heroLifeGroup = new Group();
         // Add widgets to the table here.
         table = createTable(heroLifeGroup);
-        rootTable.add(table).top().left().padLeft(16).padTop(16).expand();
+        rootTable.add(table).top().left().padLeft(8).padTop(24).expand();
 
         //rootTable.setDebug(true); // This is optional, but enables debug lines for tables.
         rootTable.pack();

@@ -80,6 +80,7 @@ public class Level1Screen extends AbstractGameScreen {
         ComponentRetriever.addMapper(AnimationComponent.class);
         ComponentRetriever.addMapper(InputComponent.class);
         ComponentRetriever.addMapper(HeroComponent.class);
+        ComponentRetriever.addMapper(DamageComponent.class);
 
         sceneLoader.loadScene("MainScene", viewport);
         ItemWrapper root = new ItemWrapper(sceneLoader.getRoot(), artemisWorld);
@@ -111,12 +112,16 @@ public class Level1Screen extends AbstractGameScreen {
         Gdx.input.setInputProcessor(inputSystem.getInputProcessor());
 
         // green fish
-        initGreenFishesByTag(root);
-        initGreenFishesByCustomIds(root);
+        initGreenFish(root);
 
         // collectables
         sceneLoader.addComponentByTagName(Tags.SEA_SHELL, SeaShellComponent.class);
         sceneLoader.addComponentByTagName(Tags.PEARL, PearlComponent.class);
+    }
+
+    private void initGreenFish(ItemWrapper root) {
+        initGreenFishesByTag(root);
+        initGreenFishesByCustomIds(root);
     }
 
     private void initGreenFishesByCustomIds(ItemWrapper root) {
