@@ -14,7 +14,7 @@ public class CameraSystem extends IteratingSystem {
     protected ComponentMapper<TransformComponent> transformMapper;
     protected ComponentMapper<ViewPortComponent> viewportMapper;
 
-    private int focus = -1;
+    private int focusEntityId = -1;
     private final float xMin, xMax, yMin, yMax;
 
     private Vector3 mVector3 = new Vector3();
@@ -31,8 +31,8 @@ public class CameraSystem extends IteratingSystem {
         ViewPortComponent viewPortComponent = viewportMapper.get(entity);
         Camera camera = viewPortComponent.viewPort.getCamera();
 
-        if (focus != -1) {
-            TransformComponent transformComponent = transformMapper.get(focus);
+        if (focusEntityId != -1) {
+            TransformComponent transformComponent = transformMapper.get(focusEntityId);
 
             if (transformComponent != null) {
 
@@ -47,7 +47,7 @@ public class CameraSystem extends IteratingSystem {
         }
     }
 
-    public void setFocus(int focus) {
-        this.focus = focus;
+    public void setFocusEntityId(int focusEntityId) {
+        this.focusEntityId = focusEntityId;
     }
 }

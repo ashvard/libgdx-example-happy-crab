@@ -20,8 +20,8 @@ import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.CameraSystem
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.PlatformSystem;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.*;
 import com.github.ashvard.gdx.simple.animation.SimpleAnimation;
-import com.github.ashvard.gdx.simple.structure.screen.AbstractGameScreen;
 import com.github.ashvard.gdx.simple.input.InputSystem;
+import com.github.ashvard.gdx.simple.structure.screen.AbstractGameScreen;
 import games.rednblack.editor.renderer.SceneConfiguration;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.components.ScriptComponent;
@@ -42,6 +42,8 @@ public class Level1Screen extends AbstractGameScreen {
     private com.artemis.World artemisWorld;
 
     private InputSystem inputSystem;
+
+    private ItemWrapper root;
 
     @Override
     public void show() {
@@ -83,7 +85,7 @@ public class Level1Screen extends AbstractGameScreen {
         ComponentRetriever.addMapper(DamageComponent.class);
 
         sceneLoader.loadScene("MainScene", viewport);
-        ItemWrapper root = new ItemWrapper(sceneLoader.getRoot(), artemisWorld);
+        root = new ItemWrapper(sceneLoader.getRoot(), artemisWorld);
 
         // platforms
         initPlatforms(root);
@@ -103,7 +105,7 @@ public class Level1Screen extends AbstractGameScreen {
         heroComponent.notifyListeners();
 
         // camera
-        cameraSystem.setFocus(heroEntity);
+        cameraSystem.setFocusEntityId(heroEntity);
 
         // InputSystem
         inputSystem = new InputSystem(5, new ActionMapperImpl());
@@ -117,6 +119,11 @@ public class Level1Screen extends AbstractGameScreen {
         // collectables
         sceneLoader.addComponentByTagName(Tags.SEA_SHELL, SeaShellComponent.class);
         sceneLoader.addComponentByTagName(Tags.PEARL, PearlComponent.class);
+
+
+        ItemWrapper debugEntityWrapper = root.getChild("qqqqq");
+        int debugEntity = debugEntityWrapper.getEntity();
+        System.out.println("debugEntity: " + debugEntity);
     }
 
     private void initGreenFish(ItemWrapper root) {
@@ -182,7 +189,9 @@ public class Level1Screen extends AbstractGameScreen {
     public void render(float delta) {
         Gdx.gl.glClearColor(Color.BLACK.r, Color.BLACK.g, Color.BLACK.b, Color.BLACK.a);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
         viewport.apply();
+        camera.update();
 
         inputSystem.update(delta);
         artemisWorld.process();

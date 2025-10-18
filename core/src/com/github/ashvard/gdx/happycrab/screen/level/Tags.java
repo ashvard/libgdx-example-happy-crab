@@ -19,4 +19,7 @@ public interface Tags {
     String GREEN_FISH_2_ID = "gf2_id";
     String GREEN_FISH_3_ID = "gf3_id";
 
+    // environment
+    String LAVA = "lava";
+
 }

@@ -15,7 +15,7 @@ public interface Resources {
     }
 
     interface Backgrounds {
-        String BACKGROUND_PNG = "background.png"; //TODO удалено, поправить в первых уровнях
+
     }
 
     interface Shaders {

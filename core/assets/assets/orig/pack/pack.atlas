@@ -1,23 +1,1263 @@
 pack.png
-	size: 256, 256
+	size: 2048, 2048
+	filter: Linear, Linear
+column_box
+	bounds: 2025, 2015, 20, 20
+green_fish
+	index: 1
+	bounds: 1, 1902, 164, 133
+green_fish
+	index: 266
+	bounds: 1, 1902, 164, 133
+green_fish
+	index: 175
+	bounds: 1, 1902, 164, 133
+green_fish
+	index: 135
+	bounds: 1, 1902, 164, 133
+green_fish
+	index: 10
+	bounds: 1, 1767, 164, 133
+green_fish
+	index: 100
+	bounds: 167, 1902, 164, 133
+green_fish
+	index: 101
+	bounds: 1, 1632, 164, 133
+green_fish
+	index: 102
+	bounds: 167, 1767, 164, 133
+green_fish
+	index: 103
+	bounds: 333, 1902, 164, 133
+green_fish
+	index: 104
+	bounds: 1, 1497, 164, 133
+green_fish
+	index: 105
+	bounds: 167, 1632, 164, 133
+green_fish
+	index: 106
+	bounds: 333, 1767, 164, 133
+green_fish
+	index: 107
+	bounds: 499, 1902, 164, 133
+green_fish
+	index: 108
+	bounds: 1, 1362, 164, 133
+green_fish
+	index: 109
+	bounds: 167, 1497, 164, 133
+green_fish
+	index: 11
+	bounds: 333, 1632, 164, 133
+green_fish
+	index: 110
+	bounds: 499, 1767, 164, 133
+green_fish
+	index: 111
+	bounds: 665, 1902, 164, 133
+green_fish
+	index: 112
+	bounds: 1, 1227, 164, 133
+green_fish
+	index: 113
+	bounds: 167, 1362, 164, 133
+green_fish
+	index: 114
+	bounds: 333, 1497, 164, 133
+green_fish
+	index: 115
+	bounds: 499, 1632, 164, 133
+green_fish
+	index: 116
+	bounds: 665, 1767, 164, 133
+green_fish
+	index: 117
+	bounds: 831, 1902, 164, 133
+green_fish
+	index: 118
+	bounds: 1, 1092, 164, 133
+green_fish
+	index: 119
+	bounds: 167, 1227, 164, 133
+green_fish
+	index: 12
+	bounds: 333, 1362, 164, 133
+green_fish
+	index: 120
+	bounds: 499, 1497, 164, 133
+green_fish
+	index: 121
+	bounds: 665, 1632, 164, 133
+green_fish
+	index: 122
+	bounds: 831, 1767, 164, 133
+green_fish
+	index: 123
+	bounds: 997, 1902, 164, 133
+green_fish
+	index: 124
+	bounds: 1, 957, 164, 133
+green_fish
+	index: 125
+	bounds: 167, 1092, 164, 133
+green_fish
+	index: 126
+	bounds: 333, 1227, 164, 133
+green_fish
+	index: 127
+	bounds: 499, 1362, 164, 133
+green_fish
+	index: 128
+	bounds: 665, 1497, 164, 133
+green_fish
+	index: 129
+	bounds: 831, 1632, 164, 133
+green_fish
+	index: 13
+	bounds: 997, 1767, 164, 133
+green_fish
+	index: 130
+	bounds: 1163, 1902, 164, 133
+green_fish
+	index: 131
+	bounds: 1, 822, 164, 133
+green_fish
+	index: 132
+	bounds: 167, 957, 164, 133
+green_fish
+	index: 133
+	bounds: 333, 1092, 164, 133
+green_fish
+	index: 134
+	bounds: 499, 1227, 164, 133
+green_fish
+	index: 136
+	bounds: 665, 1362, 164, 133
+green_fish
+	index: 137
+	bounds: 831, 1497, 164, 133
+green_fish
+	index: 138
+	bounds: 997, 1632, 164, 133
+green_fish
+	index: 139
+	bounds: 1163, 1767, 164, 133
+green_fish
+	index: 14
+	bounds: 1329, 1902, 164, 133
+green_fish
+	index: 140
+	bounds: 1, 687, 164, 133
+green_fish
+	index: 141
+	bounds: 167, 822, 164, 133
+green_fish
+	index: 142
+	bounds: 333, 957, 164, 133
+green_fish
+	index: 143
+	bounds: 499, 1092, 164, 133
+green_fish
+	index: 144
+	bounds: 665, 1227, 164, 133
+green_fish
+	index: 145
+	bounds: 831, 1362, 164, 133
+green_fish
+	index: 146
+	bounds: 997, 1497, 164, 133
+green_fish
+	index: 147
+	bounds: 1163, 1632, 164, 133
+green_fish
+	index: 148
+	bounds: 1329, 1767, 164, 133
+green_fish
+	index: 149
+	bounds: 1495, 1902, 164, 133
+green_fish
+	index: 15
+	bounds: 1, 552, 164, 133
+green_fish
+	index: 150
+	bounds: 167, 687, 164, 133
+green_fish
+	index: 151
+	bounds: 333, 822, 164, 133
+green_fish
+	index: 152
+	bounds: 499, 957, 164, 133
+green_fish
+	index: 153
+	bounds: 665, 1092, 164, 133
+green_fish
+	index: 154
+	bounds: 831, 1227, 164, 133
+green_fish
+	index: 155
+	bounds: 997, 1362, 164, 133
+green_fish
+	index: 156
+	bounds: 1163, 1497, 164, 133
+green_fish
+	index: 157
+	bounds: 1329, 1632, 164, 133
+green_fish
+	index: 158
+	bounds: 1495, 1767, 164, 133
+green_fish
+	index: 159
+	bounds: 1661, 1902, 164, 133
+green_fish
+	index: 16
+	bounds: 1, 417, 164, 133
+green_fish
+	index: 160
+	bounds: 167, 552, 164, 133
+green_fish
+	index: 161
+	bounds: 333, 687, 164, 133
+green_fish
+	index: 162
+	bounds: 499, 822, 164, 133
+green_fish
+	index: 163
+	bounds: 665, 957, 164, 133
+green_fish
+	index: 164
+	bounds: 831, 1092, 164, 133
+green_fish
+	index: 165
+	bounds: 997, 1227, 164, 133
+green_fish
+	index: 166
+	bounds: 1163, 1362, 164, 133
+green_fish
+	index: 167
+	bounds: 1329, 1497, 164, 133
+green_fish
+	index: 168
+	bounds: 1495, 1632, 164, 133
+green_fish
+	index: 169
+	bounds: 1661, 1767, 164, 133
+green_fish
+	index: 17
+	bounds: 1827, 1902, 164, 133
+green_fish
+	index: 170
+	bounds: 1, 282, 164, 133
+green_fish
+	index: 171
+	bounds: 167, 417, 164, 133
+green_fish
+	index: 172
+	bounds: 333, 552, 164, 133
+green_fish
+	index: 173
+	bounds: 499, 687, 164, 133
+green_fish
+	index: 174
+	bounds: 665, 822, 164, 133
+green_fish
+	index: 176
+	bounds: 831, 957, 164, 133
+green_fish
+	index: 177
+	bounds: 997, 1092, 164, 133
+green_fish
+	index: 178
+	bounds: 1163, 1227, 164, 133
+green_fish
+	index: 179
+	bounds: 1329, 1362, 164, 133
+green_fish
+	index: 18
+	bounds: 1495, 1497, 164, 133
+green_fish
+	index: 180
+	bounds: 1661, 1632, 164, 133
+green_fish
+	index: 181
+	bounds: 1827, 1767, 164, 133
+green_fish
+	index: 182
+	bounds: 1, 147, 164, 133
+green_fish
+	index: 183
+	bounds: 167, 282, 164, 133
+green_fish
+	index: 184
+	bounds: 333, 417, 164, 133
+green_fish
+	index: 185
+	bounds: 499, 552, 164, 133
+green_fish
+	index: 186
+	bounds: 665, 687, 164, 133
+green_fish
+	index: 187
+	bounds: 831, 822, 164, 133
+green_fish
+	index: 188
+	bounds: 997, 957, 164, 133
+green_fish
+	index: 189
+	bounds: 1163, 1092, 164, 133
+green_fish
+	index: 19
+	bounds: 1329, 1227, 164, 133
+green_fish
+	index: 190
+	bounds: 1495, 1362, 164, 133
+green_fish
+	index: 191
+	bounds: 1661, 1497, 164, 133
+green_fish
+	index: 192
+	bounds: 1827, 1632, 164, 133
+green_fish
+	index: 193
+	bounds: 1, 12, 164, 133
+green_fish
+	index: 194
+	bounds: 167, 147, 164, 133
+green_fish
+	index: 195
+	bounds: 333, 282, 164, 133
+green_fish
+	index: 196
+	bounds: 499, 417, 164, 133
+green_fish
+	index: 197
+	bounds: 665, 552, 164, 133
+green_fish
+	index: 198
+	bounds: 831, 687, 164, 133
+green_fish
+	index: 199
+	bounds: 997, 822, 164, 133
+green_fish
+	index: 2
+	bounds: 1163, 957, 164, 133
+green_fish
+	index: 20
+	bounds: 1329, 1092, 164, 133
+green_fish
+	index: 200
+	bounds: 1495, 1227, 164, 133
+green_fish
+	index: 201
+	bounds: 1661, 1362, 164, 133
+green_fish
+	index: 202
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 207
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 209
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 212
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 204
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 211
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 203
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 205
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 206
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 210
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 208
+	bounds: 1827, 1497, 164, 133
+green_fish
+	index: 21
+	bounds: 167, 12, 164, 133
+green_fish
+	index: 213
+	bounds: 333, 147, 164, 133
+green_fish
+	index: 214
+	bounds: 499, 282, 164, 133
+green_fish
+	index: 215
+	bounds: 665, 417, 164, 133
+green_fish
+	index: 216
+	bounds: 831, 552, 164, 133
+green_fish
+	index: 217
+	bounds: 997, 687, 164, 133
+green_fish
+	index: 218
+	bounds: 1163, 822, 164, 133
+green_fish
+	index: 219
+	bounds: 1329, 957, 164, 133
+green_fish
+	index: 22
+	bounds: 1495, 1092, 164, 133
+green_fish
+	index: 220
+	bounds: 1661, 1227, 164, 133
+green_fish
+	index: 221
+	bounds: 1827, 1362, 164, 133
+green_fish
+	index: 222
+	bounds: 1827, 1362, 164, 133
+green_fish
+	index: 223
+	bounds: 333, 12, 164, 133
+green_fish
+	index: 224
+	bounds: 499, 147, 164, 133
+green_fish
+	index: 225
+	bounds: 665, 282, 164, 133
+green_fish
+	index: 226
+	bounds: 831, 417, 164, 133
+green_fish
+	index: 227
+	bounds: 997, 552, 164, 133
+green_fish
+	index: 228
+	bounds: 1163, 687, 164, 133
+green_fish
+	index: 229
+	bounds: 1329, 822, 164, 133
+green_fish
+	index: 23
+	bounds: 1495, 957, 164, 133
+green_fish
+	index: 230
+	bounds: 1661, 1092, 164, 133
+green_fish
+	index: 231
+	bounds: 1827, 1227, 164, 133
+green_fish
+	index: 232
+	bounds: 499, 12, 164, 133
+green_fish
+	index: 233
+	bounds: 665, 147, 164, 133
+green_fish
+	index: 234
+	bounds: 831, 282, 164, 133
+green_fish
+	index: 235
+	bounds: 997, 417, 164, 133
+green_fish
+	index: 236
+	bounds: 1163, 552, 164, 133
+green_fish
+	index: 237
+	bounds: 1329, 687, 164, 133
+green_fish
+	index: 238
+	bounds: 1495, 822, 164, 133
+green_fish
+	index: 239
+	bounds: 1661, 957, 164, 133
+green_fish
+	index: 24
+	bounds: 1827, 1092, 164, 133
+green_fish
+	index: 240
+	bounds: 665, 12, 164, 133
+green_fish
+	index: 241
+	bounds: 831, 147, 164, 133
+green_fish
+	index: 242
+	bounds: 997, 282, 164, 133
+green_fish
+	index: 243
+	bounds: 1163, 417, 164, 133
+green_fish
+	index: 244
+	bounds: 1329, 552, 164, 133
+green_fish
+	index: 245
+	bounds: 1495, 687, 164, 133
+green_fish
+	index: 246
+	bounds: 1661, 822, 164, 133
+green_fish
+	index: 247
+	bounds: 1827, 957, 164, 133
+green_fish
+	index: 248
+	bounds: 831, 12, 164, 133
+green_fish
+	index: 249
+	bounds: 997, 147, 164, 133
+green_fish
+	index: 25
+	bounds: 1163, 282, 164, 133
+green_fish
+	index: 250
+	bounds: 1329, 417, 164, 133
+green_fish
+	index: 251
+	bounds: 1495, 552, 164, 133
+green_fish
+	index: 252
+	bounds: 1661, 687, 164, 133
+green_fish
+	index: 253
+	bounds: 1827, 822, 164, 133
+green_fish
+	index: 254
+	bounds: 997, 12, 164, 133
+green_fish
+	index: 255
+	bounds: 1163, 147, 164, 133
+green_fish
+	index: 256
+	bounds: 1329, 282, 164, 133
+green_fish
+	index: 257
+	bounds: 1495, 417, 164, 133
+green_fish
+	index: 258
+	bounds: 1661, 552, 164, 133
+green_fish
+	index: 259
+	bounds: 1827, 687, 164, 133
+green_fish
+	index: 26
+	bounds: 1163, 12, 164, 133
+green_fish
+	index: 260
+	bounds: 1329, 147, 164, 133
+green_fish
+	index: 261
+	bounds: 1495, 282, 164, 133
+green_fish
+	index: 262
+	bounds: 1661, 417, 164, 133
+green_fish
+	index: 263
+	bounds: 1827, 552, 164, 133
+green_fish
+	index: 264
+	bounds: 1329, 12, 164, 133
+green_fish
+	index: 265
+	bounds: 1495, 147, 164, 133
+green_fish
+	index: 267
+	bounds: 1661, 282, 164, 133
+green_fish
+	index: 268
+	bounds: 1827, 417, 164, 133
+green_fish
+	index: 269
+	bounds: 1495, 12, 164, 133
+green_fish
+	index: 27
+	bounds: 1661, 147, 164, 133
+green_fish
+	index: 270
+	bounds: 1827, 282, 164, 133
+green_fish
+	index: 271
+	bounds: 1661, 12, 164, 133
+green_fish
+	index: 272
+	bounds: 1827, 147, 164, 133
+green_fish
+	index: 273
+	bounds: 1827, 12, 164, 133
+life1
+	bounds: 1993, 1932, 17, 16
+pearl
+	bounds: 2025, 2000, 13, 13
+platform
+	bounds: 1, 1, 70, 9
+sand
+	bounds: 1993, 2005, 30, 30
+seashell
+	bounds: 1993, 1950, 33, 23
+stone
+	bounds: 1993, 1975, 30, 28
+
+pack2.png
+	size: 2048, 2048
 	filter: Linear, Linear
 column
-	bounds: 166, 116, 66, 130
-column_box
-	bounds: 234, 226, 20, 20
+	bounds: 167, 13, 66, 130
+crab
+	index: 1
+	bounds: 333, 208, 75, 70
+crab
+	index: 10
+	bounds: 499, 343, 75, 70
+crab
+	index: 100
+	bounds: 665, 478, 75, 70
+crab
+	index: 101
+	bounds: 831, 613, 75, 70
+crab
+	index: 102
+	bounds: 997, 748, 75, 70
+crab
+	index: 103
+	bounds: 1163, 883, 75, 70
+crab
+	index: 104
+	bounds: 1329, 1018, 75, 70
+crab
+	index: 105
+	bounds: 1495, 1153, 75, 70
+crab
+	index: 88
+	bounds: 1495, 1153, 75, 70
+crab
+	index: 11
+	bounds: 1661, 1288, 75, 70
+crab
+	index: 12
+	bounds: 1827, 1424, 75, 70
+crab
+	index: 13
+	bounds: 235, 73, 75, 70
+crab
+	index: 14
+	bounds: 410, 208, 75, 70
+crab
+	index: 15
+	bounds: 576, 343, 75, 70
+crab
+	index: 16
+	bounds: 742, 478, 75, 70
+crab
+	index: 17
+	bounds: 908, 613, 75, 70
+crab
+	index: 18
+	bounds: 1074, 748, 75, 70
+crab
+	index: 19
+	bounds: 1240, 883, 75, 70
+crab
+	index: 2
+	bounds: 1406, 1018, 75, 70
+crab
+	index: 20
+	bounds: 1572, 1153, 75, 70
+crab
+	index: 21
+	bounds: 1738, 1288, 75, 70
+crab
+	index: 22
+	bounds: 1904, 1424, 75, 70
+crab
+	index: 23
+	bounds: 1827, 1352, 75, 70
+crab
+	index: 24
+	bounds: 1904, 1352, 75, 70
+crab
+	index: 25
+	bounds: 333, 136, 75, 70
+crab
+	index: 26
+	bounds: 410, 136, 75, 70
+crab
+	index: 27
+	bounds: 499, 271, 75, 70
+crab
+	index: 28
+	bounds: 576, 271, 75, 70
+crab
+	index: 29
+	bounds: 665, 406, 75, 70
+crab
+	index: 3
+	bounds: 742, 406, 75, 70
+crab
+	index: 30
+	bounds: 831, 541, 75, 70
+crab
+	index: 31
+	bounds: 908, 541, 75, 70
+crab
+	index: 32
+	bounds: 997, 676, 75, 70
+crab
+	index: 33
+	bounds: 1074, 676, 75, 70
+crab
+	index: 34
+	bounds: 1163, 811, 75, 70
+crab
+	index: 35
+	bounds: 1240, 811, 75, 70
+crab
+	index: 36
+	bounds: 1329, 946, 75, 70
+crab
+	index: 37
+	bounds: 1406, 946, 75, 70
+crab
+	index: 38
+	bounds: 1495, 1081, 75, 70
+crab
+	index: 39
+	bounds: 1572, 1081, 75, 70
+crab
+	index: 4
+	bounds: 1661, 1216, 75, 70
+crab
+	index: 40
+	bounds: 1738, 1216, 75, 70
+crab
+	index: 41
+	bounds: 235, 1, 75, 70
+crab
+	index: 42
+	bounds: 1815, 1280, 75, 70
+crab
+	index: 43
+	bounds: 1892, 1280, 75, 70
+crab
+	index: 44
+	bounds: 1815, 1208, 75, 70
+crab
+	index: 45
+	bounds: 1892, 1208, 75, 70
+crab
+	index: 46
+	bounds: 487, 199, 75, 70
+crab
+	index: 77
+	bounds: 487, 199, 75, 70
+crab
+	index: 76
+	bounds: 487, 199, 75, 70
+crab
+	index: 87
+	bounds: 487, 199, 75, 70
+crab
+	index: 47
+	bounds: 564, 199, 75, 70
+crab
+	index: 48
+	bounds: 487, 127, 75, 70
+crab
+	index: 49
+	bounds: 564, 127, 75, 70
+crab
+	index: 5
+	bounds: 653, 334, 75, 70
+crab
+	index: 50
+	bounds: 730, 334, 75, 70
+crab
+	index: 51
+	bounds: 653, 262, 75, 70
+crab
+	index: 52
+	bounds: 730, 262, 75, 70
+crab
+	index: 53
+	bounds: 819, 469, 75, 70
+crab
+	index: 54
+	bounds: 896, 469, 75, 70
+crab
+	index: 55
+	bounds: 819, 397, 75, 70
+crab
+	index: 56
+	bounds: 896, 397, 75, 70
+crab
+	index: 57
+	bounds: 985, 604, 75, 70
+crab
+	index: 65
+	bounds: 985, 604, 75, 70
+crab
+	index: 58
+	bounds: 1062, 604, 75, 70
+crab
+	index: 64
+	bounds: 1062, 604, 75, 70
+crab
+	index: 59
+	bounds: 985, 532, 75, 70
+crab
+	index: 63
+	bounds: 985, 532, 75, 70
+crab
+	index: 6
+	bounds: 1062, 532, 75, 70
+crab
+	index: 60
+	bounds: 1151, 739, 75, 70
+crab
+	index: 62
+	bounds: 1151, 739, 75, 70
+crab
+	index: 61
+	bounds: 1228, 739, 75, 70
+crab
+	index: 66
+	bounds: 1151, 667, 75, 70
+crab
+	index: 67
+	bounds: 1228, 667, 75, 70
+crab
+	index: 68
+	bounds: 1317, 874, 75, 70
+crab
+	index: 69
+	bounds: 1394, 874, 75, 70
+crab
+	index: 7
+	bounds: 1317, 802, 75, 70
+crab
+	index: 70
+	bounds: 1394, 802, 75, 70
+crab
+	index: 71
+	bounds: 1483, 1009, 75, 70
+crab
+	index: 72
+	bounds: 1560, 1009, 75, 70
+crab
+	index: 73
+	bounds: 1483, 937, 75, 70
+crab
+	index: 74
+	bounds: 1560, 937, 75, 70
+crab
+	index: 75
+	bounds: 1649, 1144, 75, 70
+crab
+	index: 78
+	bounds: 1726, 1144, 75, 70
+crab
+	index: 79
+	bounds: 1649, 1072, 75, 70
+crab
+	index: 8
+	bounds: 1726, 1072, 75, 70
+crab
+	index: 80
+	bounds: 641, 190, 75, 70
+crab
+	index: 81
+	bounds: 718, 190, 75, 70
+crab
+	index: 82
+	bounds: 641, 118, 75, 70
+crab
+	index: 83
+	bounds: 718, 118, 75, 70
+crab
+	index: 84
+	bounds: 807, 325, 75, 70
+crab
+	index: 85
+	bounds: 884, 325, 75, 70
+crab
+	index: 86
+	bounds: 807, 253, 75, 70
+crab
+	index: 89
+	bounds: 884, 253, 75, 70
+crab
+	index: 9
+	bounds: 973, 460, 75, 70
+crab
+	index: 90
+	bounds: 1050, 460, 75, 70
+crab
+	index: 91
+	bounds: 973, 388, 75, 70
+crab
+	index: 92
+	bounds: 1050, 388, 75, 70
+crab
+	index: 93
+	bounds: 1139, 595, 75, 70
+crab
+	index: 94
+	bounds: 1216, 595, 75, 70
+crab
+	index: 95
+	bounds: 1139, 523, 75, 70
+crab
+	index: 96
+	bounds: 1216, 523, 75, 70
+crab
+	index: 97
+	bounds: 1305, 730, 75, 70
+crab
+	index: 98
+	bounds: 1382, 730, 75, 70
+crab
+	index: 99
+	bounds: 1305, 658, 75, 70
 green_fish
-	bounds: 1, 114, 163, 132
+	index: 274
+	bounds: 1, 1900, 164, 133
+green_fish
+	index: 275
+	bounds: 1, 1765, 164, 133
+green_fish
+	index: 276
+	bounds: 167, 1900, 164, 133
+green_fish
+	index: 277
+	bounds: 1, 1630, 164, 133
+green_fish
+	index: 278
+	bounds: 167, 1765, 164, 133
+green_fish
+	index: 279
+	bounds: 333, 1900, 164, 133
+green_fish
+	index: 28
+	bounds: 1, 1495, 164, 133
+green_fish
+	index: 280
+	bounds: 167, 1630, 164, 133
+green_fish
+	index: 281
+	bounds: 333, 1765, 164, 133
+green_fish
+	index: 282
+	bounds: 499, 1900, 164, 133
+green_fish
+	index: 283
+	bounds: 1, 1360, 164, 133
+green_fish
+	index: 284
+	bounds: 167, 1495, 164, 133
+green_fish
+	index: 285
+	bounds: 333, 1630, 164, 133
+green_fish
+	index: 286
+	bounds: 499, 1765, 164, 133
+green_fish
+	index: 287
+	bounds: 665, 1900, 164, 133
+green_fish
+	index: 288
+	bounds: 1, 1225, 164, 133
+green_fish
+	index: 289
+	bounds: 167, 1360, 164, 133
+green_fish
+	index: 29
+	bounds: 333, 1495, 164, 133
+green_fish
+	index: 290
+	bounds: 499, 1630, 164, 133
+green_fish
+	index: 291
+	bounds: 665, 1765, 164, 133
+green_fish
+	index: 292
+	bounds: 831, 1900, 164, 133
+green_fish
+	index: 293
+	bounds: 1, 1090, 164, 133
+green_fish
+	index: 294
+	bounds: 167, 1225, 164, 133
+green_fish
+	index: 295
+	bounds: 333, 1360, 164, 133
+green_fish
+	index: 296
+	bounds: 499, 1495, 164, 133
+green_fish
+	index: 297
+	bounds: 665, 1630, 164, 133
+green_fish
+	index: 298
+	bounds: 831, 1765, 164, 133
+green_fish
+	index: 299
+	bounds: 997, 1900, 164, 133
+green_fish
+	index: 3
+	bounds: 1, 955, 164, 133
+green_fish
+	index: 30
+	bounds: 167, 1090, 164, 133
+green_fish
+	index: 300
+	bounds: 333, 1225, 164, 133
+green_fish
+	index: 301
+	bounds: 499, 1360, 164, 133
+green_fish
+	index: 302
+	bounds: 665, 1495, 164, 133
+green_fish
+	index: 303
+	bounds: 831, 1630, 164, 133
+green_fish
+	index: 304
+	bounds: 997, 1765, 164, 133
+green_fish
+	index: 305
+	bounds: 1163, 1900, 164, 133
+green_fish
+	index: 306
+	bounds: 1, 820, 164, 133
+green_fish
+	index: 307
+	bounds: 167, 955, 164, 133
+green_fish
+	index: 31
+	bounds: 333, 1090, 164, 133
+green_fish
+	index: 32
+	bounds: 499, 1225, 164, 133
+green_fish
+	index: 33
+	bounds: 665, 1360, 164, 133
+green_fish
+	index: 34
+	bounds: 831, 1495, 164, 133
+green_fish
+	index: 35
+	bounds: 997, 1630, 164, 133
+green_fish
+	index: 36
+	bounds: 1163, 1765, 164, 133
+green_fish
+	index: 37
+	bounds: 1329, 1900, 164, 133
+green_fish
+	index: 38
+	bounds: 1, 685, 164, 133
+green_fish
+	index: 39
+	bounds: 167, 820, 164, 133
+green_fish
+	index: 4
+	bounds: 333, 955, 164, 133
+green_fish
+	index: 40
+	bounds: 499, 1090, 164, 133
+green_fish
+	index: 41
+	bounds: 665, 1225, 164, 133
+green_fish
+	index: 42
+	bounds: 831, 1360, 164, 133
+green_fish
+	index: 43
+	bounds: 997, 1495, 164, 133
+green_fish
+	index: 44
+	bounds: 1163, 1630, 164, 133
+green_fish
+	index: 45
+	bounds: 1329, 1765, 164, 133
+green_fish
+	index: 46
+	bounds: 1495, 1900, 164, 133
+green_fish
+	index: 47
+	bounds: 1, 550, 164, 133
+green_fish
+	index: 48
+	bounds: 167, 685, 164, 133
+green_fish
+	index: 49
+	bounds: 333, 820, 164, 133
+green_fish
+	index: 5
+	bounds: 499, 955, 164, 133
+green_fish
+	index: 50
+	bounds: 665, 1090, 164, 133
+green_fish
+	index: 51
+	bounds: 831, 1225, 164, 133
+green_fish
+	index: 52
+	bounds: 997, 1360, 164, 133
+green_fish
+	index: 53
+	bounds: 1163, 1495, 164, 133
+green_fish
+	index: 54
+	bounds: 1329, 1630, 164, 133
+green_fish
+	index: 55
+	bounds: 1495, 1765, 164, 133
+green_fish
+	index: 56
+	bounds: 1661, 1900, 164, 133
+green_fish
+	index: 57
+	bounds: 1, 415, 164, 133
+green_fish
+	index: 58
+	bounds: 167, 550, 164, 133
+green_fish
+	index: 59
+	bounds: 333, 685, 164, 133
+green_fish
+	index: 6
+	bounds: 499, 820, 164, 133
+green_fish
+	index: 60
+	bounds: 665, 955, 164, 133
+green_fish
+	index: 61
+	bounds: 831, 1090, 164, 133
+green_fish
+	index: 62
+	bounds: 997, 1225, 164, 133
+green_fish
+	index: 63
+	bounds: 1163, 1360, 164, 133
+green_fish
+	index: 64
+	bounds: 1329, 1495, 164, 133
+green_fish
+	index: 65
+	bounds: 1495, 1630, 164, 133
+green_fish
+	index: 66
+	bounds: 1661, 1765, 164, 133
+green_fish
+	index: 67
+	bounds: 1827, 1900, 164, 133
+green_fish
+	index: 68
+	bounds: 1, 280, 164, 133
+green_fish
+	index: 69
+	bounds: 167, 415, 164, 133
+green_fish
+	index: 7
+	bounds: 333, 550, 164, 133
+green_fish
+	index: 70
+	bounds: 499, 685, 164, 133
+green_fish
+	index: 71
+	bounds: 665, 820, 164, 133
+green_fish
+	index: 72
+	bounds: 831, 955, 164, 133
+green_fish
+	index: 73
+	bounds: 997, 1090, 164, 133
+green_fish
+	index: 74
+	bounds: 1163, 1225, 164, 133
+green_fish
+	index: 75
+	bounds: 1329, 1360, 164, 133
+green_fish
+	index: 76
+	bounds: 1495, 1495, 164, 133
+green_fish
+	index: 77
+	bounds: 1661, 1630, 164, 133
+green_fish
+	index: 78
+	bounds: 1827, 1765, 164, 133
+green_fish
+	index: 79
+	bounds: 1, 145, 164, 133
+green_fish
+	index: 8
+	bounds: 167, 280, 164, 133
+green_fish
+	index: 80
+	bounds: 333, 415, 164, 133
+green_fish
+	index: 81
+	bounds: 499, 550, 164, 133
+green_fish
+	index: 82
+	bounds: 665, 685, 164, 133
+green_fish
+	index: 83
+	bounds: 831, 820, 164, 133
+green_fish
+	index: 84
+	bounds: 997, 955, 164, 133
+green_fish
+	index: 85
+	bounds: 1163, 1090, 164, 133
+green_fish
+	index: 86
+	bounds: 1329, 1225, 164, 133
+green_fish
+	index: 87
+	bounds: 1495, 1360, 164, 133
+green_fish
+	index: 88
+	bounds: 1661, 1495, 164, 133
+green_fish
+	index: 89
+	bounds: 1827, 1630, 164, 133
+green_fish
+	index: 9
+	bounds: 1, 10, 164, 133
+green_fish
+	index: 90
+	bounds: 167, 145, 164, 133
+green_fish
+	index: 91
+	bounds: 333, 280, 164, 133
+green_fish
+	index: 92
+	bounds: 499, 415, 164, 133
+green_fish
+	index: 93
+	bounds: 665, 550, 164, 133
+green_fish
+	index: 94
+	bounds: 831, 685, 164, 133
+green_fish
+	index: 95
+	bounds: 997, 820, 164, 133
+green_fish
+	index: 96
+	bounds: 1163, 955, 164, 133
+green_fish
+	index: 97
+	bounds: 1329, 1090, 164, 133
+green_fish
+	index: 98
+	bounds: 1495, 1225, 164, 133
+green_fish
+	index: 99
+	bounds: 1661, 1360, 164, 133
+green_fish
+	bounds: 1827, 1496, 163, 132
 hero
-	bounds: 1, 42, 75, 70
-life1
-	bounds: 78, 64, 17, 16
-pearl
-	bounds: 33, 16, 13, 13
-platform
-	bounds: 1, 31, 70, 9
-sand
-	bounds: 78, 82, 30, 30
-seashell
-	bounds: 110, 89, 33, 23
-stone
-	bounds: 1, 1, 30, 28
+	bounds: 1382, 658, 75, 70

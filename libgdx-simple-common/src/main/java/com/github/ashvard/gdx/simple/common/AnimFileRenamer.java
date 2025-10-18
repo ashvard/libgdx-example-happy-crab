@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class AnimFileRenamer {
 
     public static void main(String[] args) {
-        String folderPath = "D:\\projects\\libgdx-example-happy-crab\\core\\assets\\animation\\green_fish";
+        String folderPath = "D:\\projects\\libgdx-example-happy-crab\\core\\assets\\animation\\green_fish2";
         File folder = new File(folderPath);
 
         if (!folder.exists() || !folder.isDirectory()) {

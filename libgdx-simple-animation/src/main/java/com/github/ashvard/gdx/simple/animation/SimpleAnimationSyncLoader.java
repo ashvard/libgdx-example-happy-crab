@@ -26,7 +26,7 @@ public class SimpleAnimationSyncLoader extends SynchronousAssetLoader<SimpleAnim
     public SimpleAnimation load(AssetManager assetManager, String fileName, FileHandle file, SimpleAnimationParameter parameter) {
         // we are waiting for 'fileName.afsm' in input data
         String name = file.parent().child(getAtlasName(fileName)).path();
-        TextureAtlas textureAtlas = assetManager.get(name, TextureAtlas.class);
+        TextureAtlas textureAtlas = (parameter.customTextureAtlas != null) ? parameter.customTextureAtlas : assetManager.get(name, TextureAtlas.class);
 
         FolderAnimDto folderAnimDto = new FolderAnimDto();
         folderAnimDto.setTextureAtlas(textureAtlas);
@@ -64,11 +64,8 @@ public class SimpleAnimationSyncLoader extends SynchronousAssetLoader<SimpleAnim
     }
 
     public static class SimpleAnimationParameter extends AssetLoaderParameters<SimpleAnimation> {
-        public boolean flip;
-
-        public SimpleAnimationParameter(boolean flip) {
-            this.flip = flip;
-        }
+        public boolean flip = false;
+        public TextureAtlas customTextureAtlas;
     }
 
 }

@@ -103,9 +103,6 @@ public class Level0Screen extends AbstractGameScreen {
         console = initConsole();
         Gdx.input.setInputProcessor(createInputProcessor());
 
-        container.createEntity("background", GameObjectFactory.createBackground(
-                new TextureRegion(assetManager.<Texture>get(Resources.Backgrounds.BACKGROUND_PNG)))
-        );
         initGameLoops();
 
         container.createEntity("crab", GameObjectFactory.createCrab(new InputComponent(inputSystem.getInputActions())));
@@ -172,7 +169,6 @@ public class Level0Screen extends AbstractGameScreen {
     private void loadAssets() {
         assetManager.setLoader(SimpleAnimation.class, new SimpleAnimationSyncLoader(resolver));
         assetManager.load(Resources.Animations.CRAB_ANIM_FSM, SimpleAnimation.class);
-        assetManager.load(Resources.Backgrounds.BACKGROUND_PNG, Texture.class);
         assetManager.load(Resources.Shaders.BLINK_SHADER, ShaderProgram.class);
         assetManager.finishLoading();
     }
