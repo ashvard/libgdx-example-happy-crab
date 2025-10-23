@@ -6,11 +6,18 @@ import com.github.ashvard.gdx.happycrab.SimpleAnimationHyperLap2dLoadedCallback;
 import com.github.ashvard.gdx.simple.structure.screen.loading.AssetsLoader;
 import games.rednblack.editor.renderer.resources.AsyncResourceManager;
 import games.rednblack.editor.renderer.resources.ResourceManagerLoader;
+import games.rednblack.editor.renderer.utils.ShaderCompiler;
+import games.rednblack.editor.renderer.utils.TextureArrayPolygonSpriteBatch;
 
 public class Level1AssetLoader implements AssetsLoader {
 
     @Override
     public void loadAssets(AssetManager assetManager) {
+        // обязательно до загрузки ассетов, на этапе которых компилируются шейдеры,
+        // определяем число доступных для GPU текстур.
+        // По умолчанию MAX_TEXTURE_UNIT=1 и если более 1 текстуры,то корректно шейдеры применяться не будут
+        ShaderCompiler.MAX_TEXTURE_UNIT = TextureArrayPolygonSpriteBatch.getMaxTextureUnits();
+
         ResourceManagerLoader.AsyncResourceManagerParam managerParam = new ResourceManagerLoader.AsyncResourceManagerParam();
         managerParam.loadedCallback = new SimpleAnimationHyperLap2dLoadedCallback(
                 new SimpleAnimationHyperLap2dLoadedCallback.SimpleAnimationPath[]{
