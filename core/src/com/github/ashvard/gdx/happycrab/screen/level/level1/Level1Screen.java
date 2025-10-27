@@ -119,11 +119,6 @@ public class Level1Screen extends AbstractGameScreen {
         // collectables
         sceneLoader.addComponentByTagName(Tags.SEA_SHELL, SeaShellComponent.class);
         sceneLoader.addComponentByTagName(Tags.PEARL, PearlComponent.class);
-
-
-        ItemWrapper debugEntityWrapper = root.getChild("qqqqq");
-        int debugEntity = debugEntityWrapper.getEntity();
-        System.out.println("debugEntity: " + debugEntity);
     }
 
     private void initGreenFish(ItemWrapper root) {
@@ -136,7 +131,7 @@ public class Level1Screen extends AbstractGameScreen {
         PlatformComponent platform1Component = ComponentRetriever.create(greenFish1.getEntity(), PlatformComponent.class, artemisWorld);
         platform1Component.isPingPong = true;
         platform1Component.startX = 16.5f + 0f / 2f;
-        platform1Component.startY = 1.3f + 0f / 2f;
+        platform1Component.startY = 2.3f + 0f / 2f;
         platform1Component.endX = 16.5f + 0f / 2f;
         platform1Component.endY = 8.3f + 0f / 2f;
         platform1Component.timeMs = 4f;
@@ -144,20 +139,29 @@ public class Level1Screen extends AbstractGameScreen {
         ItemWrapper greenFish2 = root.getChild(Tags.GREEN_FISH_2_ID);
         PlatformComponent platform2Component = ComponentRetriever.create(greenFish2.getEntity(), PlatformComponent.class, artemisWorld);
         platform2Component.isPingPong = true;
-        platform2Component.startX = 20.0f + 2.56f / 2f;
-        platform2Component.startY = 8.0f + 4f / 2f;
-        platform2Component.endX = 20.f + + 2.56f / 2f;
+        platform2Component.startX = 17.72f + 2.56f / 2f;
+        platform2Component.startY = 4.0f + 4f / 2f;
+        platform2Component.endX = 17.72f + 2.56f / 2f;
         platform2Component.endY = 0.5f + 4f / 2f;
-        platform2Component.timeMs = 3f;
+        platform2Component.timeMs = 2f;
 
         ItemWrapper greenFish3 = root.getChild(Tags.GREEN_FISH_3_ID);
         PlatformComponent platform3Component = ComponentRetriever.create(greenFish3.getEntity(), PlatformComponent.class, artemisWorld);
         platform3Component.isPingPong = true;
-        platform3Component.startX = 24.5f + 0f / 2f;
-        platform3Component.startY = 6.5f + 0f / 2f;
-        platform3Component.endX = 37.0f + 0f / 2f;
-        platform3Component.endY = 1.5f + 0f / 2f;
-        platform3Component.timeMs = 10f;
+        platform3Component.startX = 22.0f + 0f / 2f;
+        platform3Component.startY = 2.3f + 0f / 2f;
+        platform3Component.endX = 22.0f + 0f / 2f;
+        platform3Component.endY = 8.3f + 0f / 2f;
+        platform3Component.timeMs = 4f;
+
+        ItemWrapper greenFish4 = root.getChild(Tags.GREEN_FISH_4_ID);
+        PlatformComponent platform4Component = ComponentRetriever.create(greenFish4.getEntity(), PlatformComponent.class, artemisWorld);
+        platform4Component.isPingPong = true;
+        platform4Component.startX = 28.0f + 0f / 2f;
+        platform4Component.startY = 4.5f + 0f / 2f;
+        platform4Component.endX = 37.0f + 0f / 2f;
+        platform4Component.endY = 4.5f + 0f / 2f;
+        platform4Component.timeMs = 10f;
     }
 
     private void initGreenFishesByTag(ItemWrapper root) {
