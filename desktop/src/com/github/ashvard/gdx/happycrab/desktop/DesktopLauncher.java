@@ -7,7 +7,7 @@ import com.github.ashvard.gdx.happycrab.HappyCrabSimpleGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-		config.setTitle("happy crab");
+		config.setTitle("The Happy Crab");
 
 		config.setWindowedMode(1766, 1024);
 		config.setForegroundFPS(60);
