@@ -5,8 +5,8 @@
 		"name": "spike_idle",
 		"frameFrequency": 30,
 		"mode": "LOOP_PINGPONG",
-		"from": 224,
-		"to": 246,
+		"from": 241,
+		"to": 265,
 		"looping": true
 	},
 	{
@@ -14,34 +14,35 @@
 		"frameFrequency": 30,
 		"mode": "LOOP_PINGPONG",
 		"from": 136,
-		"to": 155,
+		"to": 175,
 		"looping": true
 	},
 	{
 		"name": "to_spike",
-		"frameFrequency": 60,
+		"frameFrequency": 30,
 		"mode": "NORMAL",
-		"from": 155,
-		"to": 224
+		"from": 175,
+		"to": 241
 	},
 	{
 		"name": "from_spike",
 		"frameFrequency": 30,
 		"mode": "REVERSED",
-		"from": 155,
-		"to": 224
+		"from": 175,
+		"to": 241
 	},
 	{
 		"name": "death",
 		"frameFrequency": 30,
 		"mode": "NORMAL",
-		"from": 247,
-		"to": 288
+		"from": 265,
+		"to": 307
 	},
 	{
 		"name": "idle",
 		"frameFrequency": 30,
 		"mode": "LOOP",
+		"from": 0,
 		"to": 135,
 		"looping": true
 	}
