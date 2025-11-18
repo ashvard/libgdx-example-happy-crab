@@ -9,6 +9,7 @@ import com.github.ashvard.gdx.happycrab.action.HeroActions;
 import com.github.ashvard.gdx.happycrab.model.scripts.AbstractGameObjectScript;
 import com.github.ashvard.gdx.happycrab.screen.CrabAnimationState;
 import com.github.ashvard.gdx.happycrab.screen.level.Tags;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.Ids;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.components.*;
 import com.github.ashvard.gdx.simple.animation.component.SimpleAnimatorUtils;
 import com.github.ashvard.gdx.simple.animation.fsm.FsmContext;
@@ -190,7 +191,7 @@ public class HeroScript extends AbstractGameObjectScript {
         SeaShellComponent seaShellComponent = seaShellMapper.get(contactEntity);
         if (seaShellComponent != null && seaShellComponent.pearlsCount > 0) {
             ItemWrapper itemWrapper = new ItemWrapper(contactEntity, engine);
-            ItemWrapper child = itemWrapper.getChild(Tags.PEARL_ID);
+            ItemWrapper child = itemWrapper.getChild(Ids.PEARL_ID);
             if (child != null) {
                 heroComponent.setPearlsCount(heroComponent.getPearlsCount() + seaShellComponent.pearlsCount);
                 seaShellComponent.pearlsCount--;

@@ -13,6 +13,7 @@ import com.github.ashvard.gdx.happycrab.action.ActionMapperImpl;
 import com.github.ashvard.gdx.happycrab.model.GameObjectFactory;
 import com.github.ashvard.gdx.happycrab.screen.HUD;
 import com.github.ashvard.gdx.happycrab.screen.level.Tags;
+import com.github.ashvard.gdx.happycrab.screen.level.level1.script.CameraScript;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.script.GreenFishScript;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.script.HeroScript;
 import com.github.ashvard.gdx.happycrab.screen.level.level1.systems.AnimationSystem;
@@ -36,7 +37,6 @@ public class Level1Screen extends AbstractGameScreen {
     private AsyncResourceManager asyncResourceManager;
     private HUD hud;
 
-    private OrthographicCamera camera;
     private Viewport viewport;
 
     private com.artemis.World artemisWorld;
@@ -53,7 +53,7 @@ public class Level1Screen extends AbstractGameScreen {
         hud.setGameManager(getGameManager());
         hud.show();
 
-        camera = new OrthographicCamera();
+        OrthographicCamera camera = new OrthographicCamera();
         viewport = new ExtendViewport(10f, 7f, camera);
 
         AssetManager assetManager = getGameManager().assetManager;
@@ -91,7 +91,7 @@ public class Level1Screen extends AbstractGameScreen {
         initPlatforms(root);
 
         // hero
-        ItemWrapper hero = root.getChild(Tags.HERO_ID);
+        ItemWrapper hero = root.getChild(Ids.HERO_ID);
         int heroEntity = hero.getEntity();
         AnimationComponent crabAnimationComponent = ComponentRetriever.create(heroEntity, AnimationComponent.class, artemisWorld);
         crabAnimationComponent.simpleAnimationComponent = GameObjectFactory.createAnimationComponentCrab();
@@ -116,6 +116,9 @@ public class Level1Screen extends AbstractGameScreen {
         // green fish
         initGreenFish(root);
 
+        // sensors
+        initChangeCameraSensors(root);
+
         // collectables
         sceneLoader.addComponentByTagName(Tags.SEA_SHELL, SeaShellComponent.class);
         sceneLoader.addComponentByTagName(Tags.PEARL, PearlComponent.class);
@@ -127,7 +130,7 @@ public class Level1Screen extends AbstractGameScreen {
     }
 
     private void initGreenFishesByCustomIds(ItemWrapper root) {
-        ItemWrapper greenFish1 = root.getChild(Tags.GREEN_FISH_1_ID);
+        ItemWrapper greenFish1 = root.getChild(Ids.GREEN_FISH_1_ID);
         PlatformComponent platform1Component = ComponentRetriever.create(greenFish1.getEntity(), PlatformComponent.class, artemisWorld);
         platform1Component.isPingPong = true;
         platform1Component.startX = 16.5f + 0f / 2f;
@@ -136,7 +139,7 @@ public class Level1Screen extends AbstractGameScreen {
         platform1Component.endY = 8.3f + 0f / 2f;
         platform1Component.timeMs = 4f;
 
-        ItemWrapper greenFish2 = root.getChild(Tags.GREEN_FISH_2_ID);
+        ItemWrapper greenFish2 = root.getChild(Ids.GREEN_FISH_2_ID);
         PlatformComponent platform2Component = ComponentRetriever.create(greenFish2.getEntity(), PlatformComponent.class, artemisWorld);
         platform2Component.isPingPong = true;
         platform2Component.startX = 17.72f + 2.56f / 2f;
@@ -145,7 +148,7 @@ public class Level1Screen extends AbstractGameScreen {
         platform2Component.endY = 0.5f + 4f / 2f;
         platform2Component.timeMs = 2f;
 
-        ItemWrapper greenFish3 = root.getChild(Tags.GREEN_FISH_3_ID);
+        ItemWrapper greenFish3 = root.getChild(Ids.GREEN_FISH_3_ID);
         PlatformComponent platform3Component = ComponentRetriever.create(greenFish3.getEntity(), PlatformComponent.class, artemisWorld);
         platform3Component.isPingPong = true;
         platform3Component.startX = 22.0f + 0f / 2f;
@@ -154,7 +157,7 @@ public class Level1Screen extends AbstractGameScreen {
         platform3Component.endY = 8.3f + 0f / 2f;
         platform3Component.timeMs = 4f;
 
-        ItemWrapper greenFish4 = root.getChild(Tags.GREEN_FISH_4_ID);
+        ItemWrapper greenFish4 = root.getChild(Ids.GREEN_FISH_4_ID);
         PlatformComponent platform4Component = ComponentRetriever.create(greenFish4.getEntity(), PlatformComponent.class, artemisWorld);
         platform4Component.isPingPong = true;
         platform4Component.startX = 28.0f + 0f / 2f;
@@ -177,8 +180,18 @@ public class Level1Screen extends AbstractGameScreen {
         }
     }
 
+    private void initChangeCameraSensors(ItemWrapper root) {
+        IntSet childrenByTag = root.getChildrenByTag(Tags.CHANGE_CAMERA);
+        IntSet.IntSetIterator iterator = childrenByTag.iterator();
+        while(iterator.hasNext) {
+            int changeCameraSensor = iterator.next();
+            ScriptComponent component = ComponentRetriever.get(changeCameraSensor, ScriptComponent.class, artemisWorld);
+            component.addScript(CameraScript.class);
+        }
+    }
+
     private void initPlatforms(ItemWrapper root) {
-        ItemWrapper platform1 = root.getChild(Tags.PLATFORM_1_ID);
+        ItemWrapper platform1 = root.getChild(Ids.PLATFORM_1_ID);
         int platformEntity = platform1.getEntity();
         PlatformComponent platform1Component = ComponentRetriever.create(platformEntity, PlatformComponent.class, artemisWorld);
         platform1Component.isPingPong = true;
@@ -195,7 +208,6 @@ public class Level1Screen extends AbstractGameScreen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         viewport.apply();
-        camera.update();
 
         inputSystem.update(delta);
         artemisWorld.process();
@@ -211,7 +223,6 @@ public class Level1Screen extends AbstractGameScreen {
             sceneLoader.resize(width, height);
             hud.resize(width, height);
         }
-
     }
 
     @Override
